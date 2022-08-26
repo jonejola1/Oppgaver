@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minus</title>
+    
+</head>
+
+<body>
+    <div id="mainDiv"> </div>
+    <button onclick="minus(2, 3, 'green')">=</button>
+    
+   
+    <script>
+        let number = 0;
+
+
+        function minus(num1, num2, color) {
+            number = num1 - num2;
+            
+            document.getElementById('mainDiv').innerHTML = `<div style="background-color: ${color}; width: 130px;">${num1} minus ${num2} equals ${number}</div>`;
+            
+        }
+        </script>
+
+</body>
+
+</html>
