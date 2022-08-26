@@ -5,24 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minus</title>
+    <title>plus and minus</title>
     
 </head>
+<!-- function plus(num1, num2, color) {
+    number = num1 + num2;
+
+    document.getElementById('mainDiv').innerHTML = `<div style="color: ${color};"> ${num1} plus ${num2} equals ${number}</div>`;
+}
+
+function minus(num1, num2, color) {
+    number = num1 - num2;
+    
+    document.getElementById('mainDiv').innerHTML = `<div style="color: ${color}; width: 130px;">${num1} minus ${num2} equals ${number}</div>`;
+    
+} -->
 
 <body>
     <div id="mainDiv"> </div>
-    <button onclick="minus(2, 3, 'green')">=</button>
+    <button onclick="equal(7, '+', 3)">+</button>
+    <button onclick="equal(7, '-', 3)">-</button>
     
-   
     <script>
+        
         let number = 0;
-
-
-        function minus(num1, num2, color) {
-            number = num1 - num2;
-            
-            document.getElementById('mainDiv').innerHTML = `<div style="background-color: ${color}; width: 130px;">${num1} minus ${num2} equals ${number}</div>`;
-            
+        let minus = 0;
+        let plus = 0;
+        
+        function equal(num1, value, num2) {
+            if(value == '+') {
+                number = num1 + num2;
+            }
+            else {
+                number = num1 - num2;
+            }
+            document.getElementById('mainDiv').innerHTML= `<div>${num1} ${value} ${num2} equals = ${number}</div>`;
         }
         </script>
 
