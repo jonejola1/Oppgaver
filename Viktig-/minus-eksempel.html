@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plus and minus</title>
+    <style>
+        .box {
+            width: 50px;
+        }
+
+        #listOperators {
+            width: 30px;
+        }
+    </style>
+</head>
+<!-- function plus(num1, num2, color) {
+    number = num1 + num2;
+
+    document.getElementById('mainDiv').innerHTML = `<div style="color: ${color};"> ${num1} plus ${num2} equals ${number}</div>`;
+}
+
+function minus(num1, num2, color) {
+    number = num1 - num2;
+    
+    document.getElementById('mainDiv').innerHTML = `<div style="color: ${color}; width: 130px;">${num1} minus ${num2} equals ${number}</div>`;
+    
+} -->
+
+<body>
+    <div id="mainDiv"> </div>
+    <input class="box" type="number" onclick="num1 = this.value">
+    <input id="listOperators" list="operators" onclick="operators = this.value">
+        <datalist id="operators">
+            <option value='+'>
+            <option value='-'>
+        </datalist>
+    <input class="box" type="number" onclick="num2 = this.value">
+    <button onclick="equal(num1, operator, num2)">Equal</button>
+    <script>
+        
+        let operator = '';
+        let answer = '';
+        let num1 = '';
+        let num2 = '';
+        
+        
+        function equal(num1, operators, num2) {
+            if(operators == '+') {
+                answer = num1 + num2;
+            }
+            if(operators == '-') {
+                answer = num1 - num2;
+            }
+            
+            document.getElementById('mainDiv').innerHTML= `<div>${num1} ${operators} ${num2} equals = ${answer}</div>`;
+        }
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabler</title>
+    <style>
+        .body {
+            padding: 0;
+            margin: 0;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div id="output" class="outPut"></div>
+    <button onclick="addereEn()">Addere 1</button>
+    <button onclick="subtrahereEn()">Subtrahere 1</button>
+    <button id="btColor" onclick="velgFarge('red',50,50)">Bytt til rød</button>
+    <button id="btColor" onclick="velgFarge('blue',50,50)">Bytt til blå</button>
+    <div id="mainDiv"></div>
+    
+    <script>
+        var outputDiv = document.getElementById('output');
+        var numToShow = 0;
+
+
+        function addereEn() {
+            numToShow += 1;
+            outputDiv.innerHTML = numToShow;
+        }
+
+        function subtrahereEn() {
+            numToShow += -1;
+            outputDiv.innerHTML = numToShow;
+        }
+
+        function velgFarge(color, width, height) {
+            document.getElementById('mainDiv').innerHTML = `
+                <div style="background-color: ${color}; width:${width}%; height:${height}px;"></div>
+                `;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

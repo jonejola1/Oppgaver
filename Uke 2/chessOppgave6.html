@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess6</title>
+    <style>
+        #board {
+            display: grid;
+            grid-template-columns: repeat(8, 100px);
+            grid-template-rows: repeat(8, 100px);
+        }
+
+        .whitePiece {
+            color: white;
+            text-shadow: 1px 1px gray;
+        }
+
+        .blackPiece {
+            color: black;
+        }
+
+        .lightSquare,
+        .darkSquare {
+            font-size: 450%;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .lightSquare {
+            background-color: rgb(240, 217, 181);
+        }
+        
+        .darkSquare {
+            background-color: rgb(181, 136, 99);
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="board">
+    </div>
+    <script>
+        showBoard();
+        function showBoard() { //instruksjonene for hvordan functionene skal kjøres
+            document.getElementById('board').innerHTML =
+                piecesRow('light', 'dark', 'black')
+                + pawnRow('dark', 'light', 'black')
+                + blankRowStartingWithLight()
+                + blankRowStartingWithDark()
+                + blankRowStartingWithLight()
+                + blankRowStartingWithDark()
+                 //function[css1]  [css2]  [color]
+                + pawnRow('light', 'dark', 'white')
+                + piecesRow('dark', 'light', 'white')
+                ;
+        }
+        // function
+        function piecesRow(css1, css2, pieceColor) {
+            return /*HTML*/`
+                <div class="${css1}Square ${pieceColor}Piece">♜</div>
+                <div class="${css2}Square ${pieceColor}Piece">♞</div>
+                <div class="${css1}Square ${pieceColor}Piece">♝</div>
+                <div class="${css2}Square ${pieceColor}Piece">♛</div>
+                <div class="${css1}Square ${pieceColor}Piece">♚</div>
+                <div class="${css2}Square ${pieceColor}Piece">♝</div>
+                <div class="${css1}Square ${pieceColor}Piece">♞</div>
+                <div class="${css2}Square ${pieceColor}Piece">♜</div>               
+            `;
+        }
+
+        function pawnRow(css1, css2, pawnColor) {
+            return /*HTML*/`            
+                <div class="${css1}Square ${pawnColor}Piece">♟</div>
+                <div class="${css2}Square ${pawnColor}Piece">♟</div>
+                <div class="${css1}Square ${pawnColor}Piece">♟</div>
+                <div class="${css2}Square ${pawnColor}Piece">♟</div>
+                <div class="${css1}Square ${pawnColor}Piece">♟</div>
+                <div class="${css2}Square ${pawnColor}Piece">♟</div>
+                <div class="${css1}Square ${pawnColor}Piece">♟</div>
+                <div class="${css2}Square ${pawnColor}Piece">♟</div>            
+            `;
+
+        }
+
+        function blankRowStartingWithLight() {
+            return blankRow('light', 'dark');
+        }
+
+        function blankRowStartingWithDark() {
+            return blankRow('dark', 'light');
+        }
+
+        function blankRow(css1, css2) {
+            return createBlankSquare(css1)
+                + createBlankSquare(css2)
+                + createBlankSquare(css1)
+                + createBlankSquare(css2)
+                + createBlankSquare(css1)
+                + createBlankSquare(css2)
+                + createBlankSquare(css1)
+                + createBlankSquare(css2);
+        }
+
+        function createBlankSquare(css) {
+            return createSquare(css, '');
+        }
+
+        function createSquare(css, content) {
+            return /*HTML*/`<div class="${css}Square">${content}</div>`;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

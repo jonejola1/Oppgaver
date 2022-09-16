@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id=textInput type=text>
+    <button onclick="printNumbers()">Print Numbers</button>
+    <div id="numbers"></div>
+    <script>
+    function printNumbers(){
+            // lage startvariabel og sett startverdi
+            // en betingelse for hvor lenge løkken skal kjøre
+            // hva skal skje med startvariabelem
+            let stopValue = 20;
+            for (let counter = 2; counter <= stopValue; counter += 2 ){
+                document.getElementById('numbers').innerHTML += '<li>' + counter + '</li>';
+            }
+        }
+    </script>
+</body>
+
+</html>

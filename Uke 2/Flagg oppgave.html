@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flagg</title>
+    <style>
+        #flagg {
+            display: grid;
+            grid-template-columns: repeat(22, 50px);
+            grid-template-rows: repeat(16, 50px);
+        }
+
+        .red {
+            background-color: #BA0C2F;
+        }
+
+        .blue {
+            background-color: #00205B;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="flagg"></div>
+
+    <script>
+        document.getElementById('flagg').innerHTML =
+            rowAllColors().repeat(6)
+            + rowWhiteBlue()
+            + rowBlue().repeat(2)
+            + rowWhiteBlue()
+            +rowAllColors().repeat(12);
+            
+
+        function rowAllColors() {
+            return createRow('red', '')
+        }
+
+        function rowWhiteBlue() {
+            return createRow('white', '')
+        }
+
+        function rowBlue() {
+            return createRow('blue', 'blue')
+        }
+
+
+        function createRow(cssClass1, cssClass2) {
+            return oneDiv(cssClass1).repeat(6)
+                + oneDiv(cssClass2)
+                + oneDiv('blue').repeat(2)
+                + oneDiv(cssClass2)
+                + oneDiv(cssClass1).repeat(12);
+        }
+
+        function oneDiv(cssClass) {
+            return /*HTML*/`<div class="${cssClass}"></div>`;
+        }
+
+    </script>
+</body>
+
+</html>

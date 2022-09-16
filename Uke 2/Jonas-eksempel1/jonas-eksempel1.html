@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eksempel 1</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <button onclick="layout1()">Ingen layout</button>
+    <button onclick="layout2()">Vertikal layout</button>
+    <button onclick="layout3()">Horisontal layout</button>
+    <button onclick="layout4()">Grid layout</button>
+
+
+    <h1>Eksempel 1</h1>
+    <div id="container">
+
+        <div class="card">
+            <div class="header green" onclick="showGreen()">
+                <h2>Verktøy</h2>
+            </div>
+            <div id="green"></div>
+        </div>
+
+        <div class="card">
+            <div class="header blue" onclick="showBlue()">
+                <h2>HTML</h2>
+            </div>
+            <div id="blue"></div>
+        </div>
+
+        <div class="card">
+            <div class="header red" onclick="showRed()">
+                <h2>CSS</h2>
+            </div>
+            <div id="red"></div>
+        </div>
+
+        <div class="card">
+            <div class="header yellow" onclick="showYellow()">
+                <h2>JavaScript</h2>
+            </div>
+            <div id="yellow"></div>
+        </div>
+
+        <div class="card">
+            <div class="header dark" onclick="showDark()">
+                <h2>Hode, kropp og ben</h2>
+            </div>
+            <div id="dark"></div>
+        </div>
+    </div>
+
+
+    <script>
+        function showGreen() {
+            blankAll();
+            document.getElementById('green').innerHTML = /*HTML*/`
+                <div class="innerCard">
+                    De to viktigste verktøyene vi skal bruke er disse:
+                    <ul>
+                        <li>Koderedigeringsprogrammet <a href="https://code.visualstudio.com/" target="_new">Visual Studio
+                                Code</a>
+                        </li>
+
+                        <div>Vi skal bruke noen extensions:</div>
+                        <ul>
+                            <li>JavaScript-booster</li>
+                            <li>es6-string-html</li>
+                            <li>Live-server</li>
+                            <li>Live-share</li>
+                        </ul>
+                        <li>Nettleseren <a href="https://www.google.com/intl/no/chrome/" target="_new">Google Chrome</a>
+                        </li>
+                    </ul>
+                </div>`;
+        }
+
+        function showBlue() {
+            blankAll();
+            document.getElementById('blue').innerHTML = /*HTML*/`
+            <div class="innerCard">
+                bruker HTML til å definere et dokument.
+                <ul>
+                    <li>Tagger for grunnleggende oppsett av en HTML-fil</li>
+                    <li>Tagger for grunnleggende formatering av tekst</li>
+                    <li><tt>&lt;div&gt;</tt></li>
+                    <li><tt>&lt;input type="text"&gt;</tt></li>
+                    <li><tt>&lt;button&gt;</tt></li>
+                    <li><a href="https://www.w3schools.com/html/default.asp" target="_new">W3Schools HTML Tutorial</a>
+                    </li>
+                    <li><a href="https://www.w3schools.com/tags/default.asp" target="_new">W3Schools HTML Reference</a></li>
+                <ul>
+            </div>`;
+        }
+
+        function showRed() {
+            blankAll();
+            document.getElementById('red').innerHTML = /*HTML*/`
+            <div class="innerCard">
+                Vi bruker CSS til å <i>style</i> et dokument, altså farger, fonter, utseende og lignende.
+                <ul>
+                    <Li>background-color</Li>
+                    <Li>color</Li>
+                    <Li>padding</Li>
+                    <Li>margin</Li>
+                    <Li>border</Li>
+                    <Li>text-align</Li>
+                    <Li>font-size</Li>
+                    <Li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_new">Flexbox</a></Li>
+                    <Li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_new">Grid</a></Li>
+                    <Li><a href="https://www.w3schools.com/css/default.asp" target="_new">W3Schools CSS Tutorial</a></Li>
+                    <Li><a href="https://www.w3schools.com/cssref/default.asp" target="_new">W3Schools CSS Reference</a></Li>
+                </ul>
+            </div>
+        </div>`;
+        }
+
+        function showYellow() {
+            blankAll();
+            document.getElementById('yellow').innerHTML = /*HTML*/`
+            <div class="innerCard">
+                Det viktigste vi skal lære er programmeringsspråket JavaScript. Vi skal lære grunnleggende
+                programmeringved å manipulere HTML- og CSS-kode på en nettside ved hjelp av JavaScript.
+                <ul>
+                    <li>Det finnes en W3Schools JavaScript Tutorial, men her anbefaler vi heller å følge kurset vårt på
+                        Moodle.
+                    </li>
+                    <li><a href="https://www.w3schools.com/jsref/default.asp" target="_new">W3Schools JavaScript
+                            Reference</a>
+                    </li>
+                </ul>
+            </div>`;
+        }
+
+        function showDark() {
+            blankAll();
+            document.getElementById('dark').innerHTML = /*HTML*/`
+                <div class="innerCardBody">
+                    <div id="head" class="bodyPart">
+                        <button onclick="headChange4()">◀</button>
+                        <img src="img/head1.png"/>
+                        <button onclick="headChange2()">▶</button>
+                    </div>
+                    <div id="body" class="bodyPart">
+                        <button onclick="bodyChange4()">◀</button>
+                        <img src="img/body1.png"/>
+                        <button onclick="bodyChange2()">▶</button>
+                    </div>
+                    <div id="legs" class="bodyPart">
+                        <button onclick="legsChange4()">◀</button>
+                        <img src="img/legs1.png"/>
+                        <button onclick="legsChange2()">▶</button>
+                    </div>
+                </div>`;
+        }
+
+        function headChange1() {
+            document.getElementById('head').innerHTML = /*HTML*/`
+                    <button onclick="headChange4()">◀</button>
+                    <img src="img/head1.png"/>
+                    <button onclick="headChange2()">▶</button>`;
+        }
+        function headChange2() {
+            document.getElementById('head').innerHTML = /*HTML*/`
+                    <button onclick="headChange1()">◀</button>
+                    <img src="img/head2.png"/>
+                    <button onclick="headChange3()">▶</button>`;
+        }
+        function headChange3() {
+            document.getElementById('head').innerHTML = /*HTML*/`
+                    <button onclick="headChange2()">◀</button>
+                    <img src="img/head3.png"/>
+                    <button onclick="headChange4()">▶</button>`;
+        }
+        function headChange4() {
+            document.getElementById('head').innerHTML = /*HTML*/`
+                    <button onclick="headChange3()">◀</button>
+                    <img src="img/head4.png"/>
+                    <button onclick="headChange1()">▶</button>`;
+        }
+
+        function bodyChange1() {
+            document.getElementById('body').innerHTML = /*HTML*/`
+                    <button onclick="bodyChange4()">◀</button>
+                    <img src="img/body1.png"/>
+                    <button onclick="bodyChange2()">▶</button>`;
+        }
+
+        function bodyChange2() {
+            document.getElementById('body').innerHTML = /*HTML*/`
+                    <button onclick="bodyChange1()">◀</button>
+                    <img src="img/body2.png"/>
+                    <button onclick="bodyChange3()">▶</button>`;
+        }
+
+        function bodyChange3() {
+            document.getElementById('body').innerHTML = /*HTML*/`
+                    <button onclick="bodyChange2()">◀</button>
+                    <img src="img/body3.png"/>
+                    <button onclick="bodyChange4()">▶</button>`;
+        }
+
+        function bodyChange4() {
+            document.getElementById('body').innerHTML = /*HTML*/`
+                    <button onclick="bodyChange3()">◀</button>
+                    <img src="img/body4.png"/>
+                    <button onclick="bodyChange1()">▶</button>`;
+        }
+
+        function legsChange1() {
+            document.getElementById('legs').innerHTML = /*HTML*/`
+                    <button onclick="legsChange4()">◀</button>
+                    <img src="img/legs1.png"/>
+                    <button onclick="legsChange2()">▶</button>`;
+        }
+
+        function legsChange2() {
+            document.getElementById('legs').innerHTML = /*HTML*/`
+                    <button onclick="legsChange1()">◀</button>
+                    <img src="img/legs2.png"/>
+                    <button onclick="legsChange3()">▶</button>`;
+        }
+
+        function legsChange3() {
+            document.getElementById('legs').innerHTML = /*HTML*/`
+                    <button onclick="legsChange2()">◀</button>
+                    <img src="img/legs3.png"/>
+                    <button onclick="legsChange4()">▶</button>`;
+        }
+
+        function legsChange4() {
+            document.getElementById('legs').innerHTML = /*HTML*/`
+                    <button onclick="legsChange3()">◀</button>
+                    <img src="img/legs4.png"/>
+                    <button onclick="legsChange1()">▶</button>`;
+        }
+
+        function blankAll() {
+            document.getElementById('green').innerHTML = '';
+            document.getElementById('blue').innerHTML = '';
+            document.getElementById('red').innerHTML = '';
+            document.getElementById('yellow').innerHTML = '';
+            document.getElementById('dark').innerHTML = '';
+        }
+
+        function layout1() {
+            document.getElementById('container').classList = [];
+        }
+
+        function layout2() {
+            document.getElementById('container').classList = [];
+            document.getElementById('container').classList.add('layout2')
+        }
+
+        function layout3() {
+            document.getElementById('container').classList = [];
+            document.getElementById('container').classList.add('layout3')
+        }
+
+        function layout4() {
+            document.getElementById('container').classList = [];
+            document.getElementById('container').classList.add('layout4')
+        }
+
+    </script>
+
+</body>
+
+
+</html>

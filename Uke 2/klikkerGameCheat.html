@@ -22,6 +22,21 @@
         let smileyIndex = 0;
         let cheater = '';
         
+        //View
+            updateView();
+        function updateView() {
+            let smiley = smileyIndex == 0 ? '😀' : '😁';
+            document.getElementById('app').innerHTML = `
+            <div onclick="doClick()">${smiley}</div>
+            <div>${points}</div>
+            <button onclick="buyUpgrade()">Buy Upgrade (10 points)</button
+            <br>
+            <button onclick="multiply()">Use Cheats</button>
+            <div>${cheater}</div>
+            `;
+        }
+
+
         // Controller
         function doClick() {
             points += pointsPerClick;
@@ -44,19 +59,7 @@
             updateView()
         }
 
-        //View
-        updateView();
-        function updateView() {
-            let smiley = smileyIndex == 0 ? '😀' : '😁';
-            document.getElementById('app').innerHTML = `
-            <div onclick="doClick()">${smiley}</div>
-            <div>${points}</div>
-            <button onclick="buyUpgrade()">Buy Upgrade (10 points)</button
-            <br>
-            <button onclick="multiply()">Use Cheats</button>
-            <div>${cheater}</div>
-            `;
-            }
+        
 
     </script>
 </body>

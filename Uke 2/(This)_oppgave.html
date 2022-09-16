@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <p>Ferdighet 3 - spesialtilfelle, this og gjøre noe med det elementet man trykker på (eller som utløser eventet)</p>
+    Samnenlign dette eksempelet med "Ferdighet 2 - Onclick - kjøre funksjon som endrer innerHTML ut fra Id"!
+    <table>
+        <tr>
+            <td onmouseover="doSomething(this)" onmouseout="doSomethingElse(this)">
+                o
+            </td>
+            <td onmouseover="doSomething(this)" onmouseout="doSomethingElse(this)">
+                o
+            </td>
+        </tr>
+        <tr>
+            <td onmouseover="doSomething(this)" onmouseout="doSomethingElse(this)">
+                o
+            </td>
+            <td onmouseover="doSomething(this)" onmouseout="doSomethingElse(this)">
+                o
+            </td>
+        </tr>
+    </table>
+
+    <script>
+
+        function doSomething(etNavnDuVelgerSelv) {
+            etNavnDuVelgerSelv.innerHTML = 'x';
+            
+            // Nå er etNavnDuVelgerSelv det samme som om vi hadde kjørt:
+            // var etNavnDuVelgerSelv = document.getElementById('z');
+            // eller
+            // var etNavnDuVelgerSelv = document.getElementById('y');
+            // HVIS og bare hvis du trykker på akkurat det elementet som har id=z
+        }
+        
+        function doSomethingElse(removeAfterMouseOut) {
+            removeAfterMouseOut.innerHTML = 'o';
+        }
+
+    </script>
+</body>
+
+</html>

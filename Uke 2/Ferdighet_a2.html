@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>CUM= Command-under-mouse</title>
+</head>
+
+<body onload="testOnLoad('Loaded')">
+    <p>Ferdighet 2a - Alternative eventhandlere: onchange osv.</p>
+    <input type="text" onchange="testOnLoad('Enter')" oninput="testOnLoad('KeyPressed')" />
+    <h3 onmouseover="testOnLoad('Hover over')" onmouseout="testOnLoad('Mouse Away')">Test test test</h3>
+    <h2 id="info"></h2>
+
+    <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_new">Mer informasjon her</a>
+    <script>
+        function testOnLoad(onload) {
+            document.getElementById('info').innerHTML += `<li>${onload}</li>`;
+        }
+    </script>
+</body>
+
+</html>

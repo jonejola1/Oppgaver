@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div id="letters"></div>
+        <input  onchange="printLetters(this)"><button onclick="printLetters('Hei på deg')">Print letters</button>
+    </div>
+    <script>
+        // legg til et mellomrom mellom hvert tegn i tekst stringen
+        // H e i p å deg
+        // 0 1 2 3
+        function printLetters(inputString){
+            let text = '';
+            // document.getElementById("letters").innerHTML += inputString;
+            for(let index=0; index<=inputString.length; index++){
+                text = text + inputString.charAt(index) + ' ';
+            }
+            document.getElementById("letters").innerHTML = text;
+        }
+    </script>
+</body>
+</html>
