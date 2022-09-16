@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+            font-size: 300%;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        // Model
+        let points = 0;
+        let pointsPerClick = 1;
+        let smileyIndex = 0;
+        let cheater = '';
+        
+        // Controller
+        function doClick() {
+            points += pointsPerClick;
+            smileyIndex = 1 - smileyIndex;
+            updateView();
+        }
+
+        function buyUpgrade() {
+            if (points < 10) return;
+            points -= 10;
+            pointsPerClick++;
+            updateView();   
+        }
+        //ti dobler poeng og points for hver gang du trykker på Use Cheats
+        function multiply() {
+            if (points > -1)
+            cheater = 'Du har jukset';
+            points *= 10;
+            pointsPerClick *= 10;
+            updateView()
+        }
+
+        //View
+        updateView();
+        function updateView() {
+            let smiley = smileyIndex == 0 ? '😀' : '😁';
+            document.getElementById('app').innerHTML = `
+            <div onclick="doClick()">${smiley}</div>
+            <div>${points}</div>
+            <button onclick="buyUpgrade()">Buy Upgrade (10 points)</button
+            <br>
+            <button onclick="multiply()">Use Cheats</button>
+            <div>${cheater}</div>
+            `;
+            }
+
+    </script>
+</body>
+</html>
