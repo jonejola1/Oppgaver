@@ -1,82 +1,1410 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <div>
-
-
-
-
-
-    </div>
-
-
-
+    <div></div>
     <script>
+        /*
 
-        // let me == me1; // to liktegn er en logisk verdi
-        // let you = ''; // bare et liktegn er en tilordning
+    //Making input felt in mvc for changing the value of variable in MVC
+        //find the name for the variable you want to change and w
+        //eksample
+        var dogName;
+        var street = '';
 
-        return // avslutter funksjonen og sender med avlsluttningen
+        //important part only
+
+        <input
+            type="text"
+            oninput="dogName = this.value"
+        />
+        //Now whatever you write into the input field will change dogName's value to the input text
         
-       // Turnary operator
-        //Logisk verdi ? verdi hvis sant : verdi hvis usant
-        true ? 'ja' : 'nei'
-        "ja/nei"
 
-        // guessNumber = 57;
-        // secretNumber = 60;
-        guessNumber == secretNumber ? 'Du tippet riktig!' : 'Du tippet feil.'
-        "Du tippet feil"
+
+
+        //
+            if (result == true){return} //this will exit the function or if statement
+        //
         
-
-
-        personName = 'Jonas';
-        "Jonas"
-        `Hei, ${personName}!`
-        "Hei, Jonas!"
-        
-        
-    //  
-        Math.random() //gir random tall
-        Math.ceil(random) // runder opp til næræmeste heltall
-        Math.floor(random) // runder ned til nærmeste minste heltall
-        Math.round(random)  // returnerer nærmeste heltall
-
-        Math.floor(Math.random() * 100) // genererer random tall fra 1 til 100
-        Math.floor(Math.random() * 100) + 1
-    //
-
-    //
-        text.toUpperCase(); //gjør teksten til store bokstaver
-        text.toLowerCase(); //gjør teksten til små bokstaver
-    //
-
-    //
-        let ord = "heipådegdingamlebanan"
-        let lengde = ord.length;
-        console.log(lengde); // 21
-    //
-
-    //
-        let text = "Heisann";
-        let første = text[0]; // "H" //vil hente ut den bokstaven som er lik tallet
-        let eksempel1 = text.substring(0,3); // "Hei" 
-        let eksempel2 = text.substring(1); // "eisann" // henter alt utenom første bokstav
-    //
-        // Splicing and Slicing Arrays
-        // The splice() method adds new items to an array.
-
-        // The slice() method slices out a piece of an array.
-
-    //
+        //
+             let me == me1; // to liktegn er en logisk verdi
+             let you = ''; // bare et liktegn er en tilordning
     
-    //
-    </script>
+             return  // avslutter funksjonen og sender med avlsluttningen
+        //
+            
+        // 
+            // en turnary operator er slik
+    
+            Logisk verdi ? verdi hvis sant : verdi hvis usant
+            true ? 'ja' : 'nei'
+            "ja/nei"
+        //
+    
+        //
+            // guessNumber = 57;
+            // secretNumber = 60;
+            guessNumber == secretNumber ? 'Du tippet riktig!' : 'Du tippet feil.'
+            "Du tippet feil"
+        //  
+    
+        //
+             personName = 'Jonas';
+             "Jonas"
+             `Hei, ${personName}!`
+             "Hei, Jonas!"
+        //   
+            
+        //  
+             Math.random() //gir random tall
+             Math.ceil(random) // runder opp til næræmeste heltall
+             Math.floor(random) // runder ned til nærmeste minste heltall
+             Math.round(random)  // returnerer nærmeste heltall
+    
+             Math.floor(Math.random() * 100) // genererer random tall fra 1 til 100
+             Math.floor(Math.random() * 100) + 1
+             Math.max(10, 20); //will return the highest number
+        //
+    
+        //
+             text.toUpperCase(); gjør teksten til store bokstaver
+             text.toLowerCase(); gjør teksten til små bokstaver
+        //
+    
+        //
+             let ord = "heipådegdingamlebanan"
+             let lengde = ord.length;
+             console.log(lengde); // 21
+        //
+    
+        //
+             let text = "Heisann";
+             let første = text[0]; // "H" //vil hente ut den bokstaven som er lik tallet fra [0]- til så lang setningen er 
+             let eksempel1 = text.substring(0,3); // "Hei" 
+             let eksempel2 = text.substring(1); // "eisann" // henter alt utenom første bokstav
+        //
+    
+        //
+            //Splicing and Slicing Arrays
+             The splice() method adds new items to an array.
+             eksempel:
+             let array = ['nameZero', 'nameOne', 'nameTwo', 'nameThree', 'nameFour', 'nameFive']
+             array.splice(3, 2) // this will remove 'nameThree' and 'nameFour'. Because the first number in the paranthesis is the start number and the second number is the deleteCount or how many you want to get rid of. 
+        
+            //change an array (simple)
+
+             array[2] = 'Nitro' //this changed 'nameTwo' into 'Nitro'.
+
+            //add to array (simple)
+
+                let newName = 'Jonas';
+
+                array.push(newName) // this will push/add 'Jonas' to the array.
+
+             The slice() method slices out a piece of an array.
+        //
+    
+        //
+             kode     output
+              \'   single quote 
+              \"   double quote
+              \\   backslash
+              \n   newline
+              \r   carrige return
+              \t   tab
+              \b   backspace
+              \f   form feed
+        //
+    
+        //
+            // sette inn en variabel i en setning. kan brukes som this.value input felt
+            // var ourName = "Everyone!"
+            // var ourString = " Hey, fellow traveller we need to get " + ourName + "out of the building."
+        //
+    
+        
+        // plusse en tekst in i en annen
+             var etOrd = "Fantastisk!";
+             var ourString = "GET Academy er "
+             etOrd += ourString;
+             da vil det den si
+             Get Academy er Fantastisk!
+    
+        
+        // how to find the last letter in a string 
+    
+            var firstName = "jonas";
+            var lastLetterOfFirstName = firstName[firstName.length - 1];
+    
+            var lastName = "hockeyPulver"
+            var lastLetterOfLastName = lastName[lastName.length - 1];
+            // da vil jeg få "r" i lastName, 
+            //man kan fortsette og øke nummeret og da vil du gå innover fra siste Bokstav.
+        //
+        
+        // 
+            function parameters(myNoun, myAdjective, myVerb, myAdverb) {
+                var result = "";
+                result += "The" + myAdjective + " " + myNoun + " " + myVerb + "to the store "
+    
+                return result;
+            }
+            // bytter du disse orda så endrer du teksten over.
+            console.log(wordBlanks("dog", "big", "ran", "quickly"));
+            console.log(wordBlanks("bike", "slow", "flew", "slowly"));
+        //
+    
+        // 
+        //Array
+            var ourArray = ["John", 23]
+    
+        //Nested array
+            //flere arrays i en array 
+            var ourArray = [["the universt", 42], ["everything", 101010]];
+    
+        //use index to find a array
+            var ourArray = [50,60,70];
+            var ourData = ourArray[2]; //blir 60
+    
+        //using index to modify arrays
+            var ourArray = [20,40,60];
+            ourArray[2] = 64; // 60 blir endret til 64
+    
+        //use index with array of arrays
+            var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]]
+            var myData = myArray[2]2] // første bracket er første array inne i arrayet, og den andre bracketen er indexen inne i arrayet,
+            // så myData blir (9)
+    
+        //pin data to array with push
+            var ourArray = ["Stimpson", "j", "cat"];
+            ourArray.push(["happy", "joy"]);
+            // ourArray blir da ["stimpson", "J", "cat", ["happy", "joy"]]
+            
+        //remove the last item from an array with pop function
+            var ourArray = [1,2,3];
+            var removedFromOurArray = ourArray.pop();
+            //removedFromOurArray er nå 3 og ourArray er [1,2]
+    
+        //remove the first element from array with shift 
+            var ourArray = ["stimpson", "J", ["cat"]];
+            var removedFromOurArray = ourArray.shift();
+            // removedFromOurArray vil nå inneholde "Stimpson" og ourArray vil inneholde ["J", ["cat"]]
+            
+        //unshift adds an element to the beggining of an array
+            var ourArray = ["Stimpson", "J", "cat"];
+            ourArray.shift(); // = ["J", "cat"]
+            ourArray.unshift("Happy"); // = ["Happy", "J", "cat"]
+    
+            //shopping list an array of arrays 
+            var myList = [["cereal", 3], ["milk", 2], ["bananas", 3],["juice", 2], ["eggs", 12]]
+        //
+    
+        
+        //functions
+            function ourReusableFunction() {
+                console.log("Hey, World!");
+            }
+            ourReusableFunction();
+            ourReusableFunction();
+            ourReusableFunction();
+            // this will print out Hey, World! three times
+    
+        // function with arguments/args 
+            function ourFunctionWithArgs(a, b) {
+                console.log(a - b);
+            }
+            ourFunctionWithArgs(10, 5); //this will be 5
+    
+        //global scope and functions
+            //global scope and local scope
+            //local scope variables is only visible from within a function
+    
+            //global vs local scope in functions
+            //a local scope variable with the same name as a global scope variable will take over the global variable
+    
+        //return a value from a function
+            function minusSeven(num) {
+                return num - 7;
+            }
+    
+            console.log(minusSeven(10)) // this equals to 3
+    
+        //undefined value returned
+            var sum = 0;
+            function addThree() {
+                sum = sum + 3; // this returns nothing/undefined
+            }
+    
+        //assign returned value to a variable
+            var changed = 0;
+    
+            function change(num) {
+                return (num + 5) / 3
+            }
+    
+            changed = change(10); // changed will now equal the result of function over
+    
+        //boolean values
+
+            function welcomeToBooleans() {
+                return false; // could also be true
+            }
+            
+        //
+    
+        //If statements
+    
+            function ourTrueOrFalse(isItTrue) {
+                if (isItTrue) {
+                    return "Yes, it's true"; 
+                }
+                return "No, it's false";
+            } 
+            console.log(ourTrueOrFalse(true)) // the above will equal "Yes, it's true"
+    
+        //Equality Operators
+    
+            function testEqual(val) {
+                if(val == 12) {
+                    return "Equal";
+                }
+                return "Not equal";
+            }
+            console.log(testEqual(10)) //this function will print "Not equal"
+    
+            function testStrict(val) {
+                if (val === 7) {
+                    return "Equal";
+                }
+                return "Not equal"
+            }
+            console.log(testStrict(7)) //this will say Equal but if you put in a string seven it will not be equal
+    
+            function compareEquality(a,b) {
+                if (a == b) {
+                    return "Equal";
+                }
+                return "Not equal"
+            }
+            console.log(compareEquality(10, "10")); // this will be Equal but if you set it to triple equal sign it will be Not equal
+    
+        //comparison with the inequality operator 
+            function testNotEqual(val) {
+                if (val != 99) {
+                    return "Not equal";
+                }
+                return "Equal";
+            }
+            console.log(testNotEqual(10)) //this will say not equal
+    
+        //strick inequality operator 
+            function testStrictNotEqual(val) {
+                if (val !== 17) {
+                    return "Not equal";
+                }
+                return "equal";
+            }
+            console.log(testStrictNotEqual(10)) // this will be not equal
+    
+        //comparison with the logical and operator
+            function testGreaterThan(val) {
+                if(val > 100) {
+                    return "Over 100";
+                }
+                if (val > 10)
+                    return "Over 10";
+    
+                return "10 or Under";
+            }
+            console.log(testGreaterThan(10)) // this will be "10 or under"
+    
+        //comparison with the Greater Than Or Equal To Operator
+            function testGreaterOrEqual(val) {
+                if (val >= 20) {
+                    return "20 or Over";
+                }
+                if (val >= 10) {
+                    return "10 or Over";
+                }
+                return "Less than 10";
+            }
+            console.log(testGreaterOrEqual(10)) // this will equal "10 or Over"
+    
+        //less than operator
+            function testLessThan(val) {
+                if (val < 25) {
+                    return "Under 25";
+                }
+                if (val < 55) {
+                    return "Under 55":
+                }
+                return "55 or Over";
+            }
+            console.log(testLessThan(10)) // this will equal "Under 25"
+    
+        //comparison with the Less Than Or Equal To Operator
+            function testLessOrEqual(val) {
+                if (val <= 12) {
+                    return "Smaller Than or Equal to 12";
+                }
+                if (val <= 24) {
+                    return "Smaller Than or Equal to 24";
+                }
+                return "More Than 24";
+            }
+            console.log(testLessOrEqual(10)) //this equals Smaller Than or Equal to 12
+        
+        
+        //And/ Or Operators
+    
+        //Comparisons with the Logical And Operators
+    
+            function testLogicalAnd(val) {
+                if (val <= 50 && val >= 25) {
+                  return "Yes";
+                }
+                return "No";
+            }
+            console.log(testLogicalAnd(35)) // now this will say "Yes"
+    
+        //Comparison with the Logical Or Operator
+            
+            function testLogicalOr(val) {
+                
+                if (val < 10 || val > 20) {
+                    return "Outside";
+                }
+                return "Inside";
+            }
+    
+            testLogicalOr(15); //will return "Outside";
+    
+        //Else statements
+    
+            function testElse(val) {
+                var result = "";
+    
+                if (val > 5) {
+                    result = "Bigger than 5";
+                } else {
+                    result = "5 or Smaller";
+                }
+                return result; // this will return "5 or Smaller"
+            }
+            testElse(4)
+    
+        //else if statement
+            
+            function testElseIf(val) {
+                if (val > 10) {
+                    return "Greater than 10";
+                } else if (val < 5) {
+                    return "Smaller than 5";
+                } else {
+                    return "Between 5 and 10"
+                }
+            }
+            testElseIf(7) // this will return "Between 5 and 10"
+    
+        //Logical Order in If Else Statements
+    
+            function orderMyLogic(val) {
+                if (val < 10) {
+                    return "Less than 10";
+                } else if ( val < 5) {
+                    return "Less than 5";
+                } else {
+                    return "Greater than or equal to 10";
+                }
+            }
+            console.log(orderMyLogic(7)) //this wont work and you have to swap less than 10 with less than 5 then it will work.
+            
+        // Chaining If Else Statements
+            function testSize(num) {
+                if (num < 5) {
+                    return "Tiny"
+                } else if (num < 10) {
+                    return "Small"
+                } else if (num < 15) {
+                    return "Medium"
+                } else if (num < 20) {
+                    return "Large"
+                } else {
+                    return "Huge"
+                }    
+            }
+    
+            console.log(testSize(16)) // this will return "Large";
+    
+        //golf Game
+            var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"]
+            function golfScore(par, strokes) {
+                if (strokes == 1) {
+                    return names[0]
+                } else if (strokes <= par - 2) {
+                    return names[1]
+                } else if (strokes == par - 1) {
+                    return names[2]
+                } else if (strokes == par) {
+                    return names[3]
+                } else if (strokes == par + 1) {
+                    return names[4]
+                } else if (strokes == par + 2) {
+                    return names[5]
+                } else if (strokes >= par + 3) {
+                    return names[6]
+                }
+            }
+    
+            console.log(golfScore(5, 4)) // this will return "Birdie"
+    
+        //Switch Statement
+            function caseInSwitch(val) {
+                var answer = "";
+                switch(val) {
+                    case 1:
+                        answer = "alpha";
+                        break;
+                    case 2:
+                        answer = "beta";
+                        break;
+                    case 3: 
+                        answer = "gamma";
+                        break;
+                    case 4: 
+                        answer = "delta";
+                        break;
+                }
+    
+                return answer;
+            }
+    
+            console.log(caseInSwitch(1)); // this will return the answer with "alpha"
+    
+        //Default Option in Switch Statements 
+            function switchOfStuff(val) {
+                var answer = "";
+                switch (val) {
+                    case "a":
+                        answer = "apple";
+                        break;
+                    case "b":
+                        answer = "bird";
+                        break;
+                    case "c": 
+                        answer = "cat";
+                        break;
+                    default:
+                        answer = "stuff";
+                        break;
+                }
+    
+                return answer;
+            }
+            console.log(switchOfStuff("a")); // here it will return "apple" but if you switched the val of switchOfStuff() to a integer it will say stuff.
+    
+        //Multiple Identical Options in Switch Statements
+            function sequantialSizes(val) {
+                var answer = "";
+                switch(val) {
+                    case 1:
+                    case 2:
+                    case 3:
+                        answer = "Low";
+                        break;
+                    case 4:
+                    case 5:
+                    case 6:
+                        answer = "Mid";
+                        break;
+                    case 7:
+                    case 8:
+                    case 9:
+                        answer = "High";
+                        break;
+                }
+    
+                return answer;
+            }
+            console.log(sequantialSizes(5)); //this will return "Mid";
+    
+            //Replacing If Else Chains with Switch
+                function chainToSwitch(val) {
+                var answer = "";
+    
+                switch(val) {
+                    case "bob":
+                        answer = "Marley";
+                        break;
+                    case 42:
+                        answer = "The Answer";
+                        break;
+                    case 1: 
+                        answer = " There is no #1";
+                        break;
+                    case 99: 
+                        answer = "Missed me by this much!";
+                        break;
+                    case 7:
+                        answer = "Ate Nine"
+                        break;
+                } // now we changed the chain of else if statements into a switch statement
+    
+        //Returning Boolean Values from Functions
+                function isLess (a,b) {
+                    return a < b;
+                }
+                console.log(isless(10, 15)); // this will say true 
+    
+        //Returning Early Pattern from Functions
+                function avTest(a,b) {
+                    if (a < 0 || b < 0) {
+                        return undefined;
+                    }
+    
+    
+                    return math.round(math.pow(math.sqrt(a) + math.sqrt(b), 2))
+                }
+                console.log(abTest(2,2)); // this will return "8" and a negative number will return undefined
+    
+        //Counting Cards
+                var count = 0;
+    
+                function cc(card) {
+                    switch(card) {
+                        case 2:
+                        case 3:
+                        case 4:
+                        case 5:
+                        case 6:
+                            count++;
+                            break;
+                        case 10:
+                        case "J":
+                        case "Q":
+                        case "K":
+                        case "A":
+                            count--;
+                            break;
+                    }  
+    
+                    var holdBet = 'Hold';
+                    if (count > 0) {
+                        holdbet = 'Bet'
+                    }
+    
+                    return count + " " + holdBet;
+                }
+                cc(2); cc('K'); cc(10); cc('K'); cc('A');// this will output hold
+                console.log(cc(4))
+    
+        // Build JavaScript Objects
+                var ourDog = {          // our dog is a object defined by the curlybraces
+                    "name": "Camper",   // before the colons is a property. properties can be any data type in JavaScript
+                    "legs": 4,          // everything after the colons is a value
+                    "tails": 1,
+                    "friends": ["everthing!"]
+                };
+    
+        // Accessing Object Properties with Dot Notation
+                var testObj = {
+                    "hat": "ballcap",
+                    "shirt": "jersey",
+                    "shoes": "cleats"
+                };
+    
+                //this will access the properties
+                var hatValue = testObj.hat;
+                var shirtValue = testObj.shirt;
+                // this will access the object properties
+    
+        // Accessing Object Properties with Bracket Notation
+                var testObj = {
+                    "an entree": "hamburger",
+                    "my side": "veggies",
+                    "the drink": "water"
+                };
+                //the same as above 
+                var entreeValue = testObj["an entree"]
+                var drinkValue = testObj['the drink'] //it will also work with single quotes
+    
+        // Accessing Object Properties with Variables
+    
+            var testObj = {
+                12: "Namath",
+                16: "Montana",
+                19: "Unitas"
+            };
+    
+            var playerNumber = 16; // this is now the number 16 montana
+            var player = testObj[playerNumber]; // thisis now set to montana
+    
+        //Updating Object Properties
+            var ourDog = {
+                "name": "Camper"
+                "legs": 4,
+                "tails": 1,
+                "friends": ["everthing!"]
+            };
+    
+            ourDog.name = "Happy Camper"; // now the object property (name) a new value (Happy Camper)
+    
+        //Add New Properties to an Object
+            var ourDog = {
+                "name": "Happy Coder",
+                "legs": 4,
+                "tails": 1
+                "friends": ["freeCodeCamp Campers"]
+            };
+    
+            ourDog['bark'] = "Woof!" // now bark is a property inside ourdog
+    
+        // Delete Properties From an Object
+            var ourDog = {
+                "name": "Camper",
+                "tails": 1
+                "friends": ["everthing!"]
+                "bark": "bow-wow"
+            };
+            
+            delete ourdog.bark; // now the property bark is deleted and is no longer in our object
+    
+        //Using Objects for Lookups
+            function phoneticLookup(val) {
+                var result = "";
+    
+                var lookup = {
+                    "alpha": "Adams",
+                    "bravo": "Boston",
+                    "charlie": "Chicago",
+                    "delta": " Denver",
+                    "echo": "Easy",
+                    "foxtrot": "Frank"
+                };
+                result = lookup[val]
+                return result
+            }
+            console.log(phoneticLookup(foxtrot)) // this will now say Frank
+    
+        //Testing Objects fro Properties
+            var myObj = {
+                gift: "pony",
+                pet: "kitten",
+                bed: "sleigh"
+            };
+            function checkObj(checkProp){
+                if ( myObj.hasOwnProperty(chekProp)) {
+                    return myObj[chekcProp];
+                } else {
+                    return "Not Found"
+                }
+            }
+            console.log(checkObj("gift")) // this returns "pony"
+            console.log(checkObj("hello")) // this returns "Not Found"
+    
+        //Manipulating Complex Objects
+            var myMusic = [
+                {
+                    "artist": "Billy Joel",
+                    "title": "Piano Man",
+                    "release_year": 1973,
+                    "formats": [
+                        "CD",
+                        "8T",
+                        "LP"
+                    ],
+                    "gold": true
+                },
+                {
+                    "artist": "Beau Carnes",
+                    "title": "Cereal Man",
+                    "release_year": 2003,
+                    "formats": [
+                        "Youtube video"
+                    ]
+                }
+            ]; //this is two objects in myMusic array
+    
+        //Accessing Nested Objects
+            var myStorage = {
+                "car": {
+                    "inside": {
+                        "glove box": "maps",
+                        "passenger seat": "crumbs"
+                    },
+                    "outside": {
+                        "trunk": "jack"
+                    }
+                }
+            };
+            
+            var gloveBoxContents = myStorage.car.inside["glove box"];  // because there is a space in "glove box" you will need to use bracket notation
+            console.log(gloveBoxContents)// this will give you "maps"
+    
+        //Accessing Nested Arrays
+            var myPlants = [
+                { // object
+                    type: "flowers",
+                    list: [ // array
+                        "rose",
+                        "tulip",
+                        "dandelion"
+                    ]
+                },
+                { // object
+                    type: "trees",
+                    list: [ // array
+                        "fir",
+                        "pine",
+                        "birch"
+                    ]
+                }
+            ];
+    
+            var secondTree = myPlants[1].list[1]; // the trees is the second element in the myPlant array so you need to use bracket notation to select the second element and then use another to access the list and tree
+    
+        // Record Collection
+    
+            var collection = {
+                "2548": {
+                    "album": "Slippery When Wet",
+                    "artist": "Bon Jov",
+                    "tracks": [
+                        "Let It Rock",
+                        "You Give Love a Bad Name"
+                    ]
+                },
+                "2468": {
+                    "album": "1999",
+                    "artist": "Prince",
+                    "tracks": [
+                        "1999",
+                        "Little Red Corvette"
+                    ]  
+                },
+                "1245": {
+                    "artist": "Robert Palmer",
+                    "tracks": [ ]
+                },
+                "5439": {
+                    "album": "ABBA Gold"
+                }
+            };
+            // Keep a copy of the collection for tests
+            var collectionCopy = JSON.parse(JSON.stringyfy(collection)); //this makes a copy of the object 
+    
+            function updateRecords(id,prop, value) {
+                if (value === "") {
+                    delete collection[id][prop];
+                } else if (prop === "tracks") {
+                    collection[id][props] = collection[id][prop] || []; // this is if this already exist it will equal itself, but if itself does not exits it will be set to equal an empty Array 
+                    collection[id][props].push(value); // if it exist we can push the value to the end of the array
+                } else {
+                    collection[id][prop] = value; // this will set the property to equal itself
+                }
+    
+                return collections
+            }
+            updateRecords(2468, "tracks", "test"); // this adds a track named "test"
+            console.log(updateRecords(5439, "artist", "ABBA"));
+
+        //Iterate with While loops
+            var = myArray = []
+            var i = 0 
+            while(i < 5) { // while (i) is lower than "5" it will run until it gets to 5.
+                myArray.push(i);
+                i++;
+            }
+
+            console.log(myArray); // this will print "[0, 1, 2, 3, 4]"
+     
+        //Iterate with For Loops
+            var myArray = []
+            //the for loop has 3 seperate items the first is initialization then the condition and then the final expression
+            //the first needs to be initialized for the for loop, 2. when the condition equals to false we break out of the loop, 3. at the end of each iteration it will incriment i by one. and fill it from 1-5
+            for (var i = 1; i < 6; i++) {
+                myArray.push(i);
+            }
+
+            console.log(myArray); // this will say  "[1, 2, 3, 4, 5,]"
+            //the for loop iterated 5 different times and each time we pushed a new digit on to the array. at the end of each iteration it incremented "i" one time up / so it pushed a larger number on to the array.
+    
+            // Iterate Odd Number with a For Loop
+            var myArray = [];
+            for (var i = 1; i < 10; i += 2) {
+                myArray.push(i);
+            }
+            console.log(myArray) // this will equal "[1, 3, 5, 7, 9]" because it starts with "1" and it incriments by "2" for every iteration we get odd numbers.
+
+        //Count Backwards with a For Loop
+            var myArray = [];
+
+            for (var i = 9; i > 0; -= 2) { // here you use "-= 2" to decrement and go down by "2" for every iteration.
+                myArray.push(i)
+            }
+            console.log(myArray) // this will show [9, 7, 5, 3, 1] // it is basically the same as above.
+        
+        //Iterate Through an Array with a For Loop
+            var myArr = [ 2, 3, 4, 5, 6 ];
+            var total = 0;
+             for (var i = 0; i < myArr.length; i++) { //this for loop will add every number in the array for every iteration and then show the result in the end.
+                total += myArr(i);
+             }
+             console.log(total) //This will equal "20" in total 
+
+        //Nesting For Loops
+            function multiplyAll(arr) {
+                var product = 1;
+
+                for (var i = 0; i < arr.length; i++) { //this is for the outer arrays 
+                    for (var k=0; j < arr[i].lenght; j++) // this if for the inner arrays inside the array { // the index is going to be diffrent every time so its going to each diffrent array inside the nested array
+                    product *= arr[i][j]; // then we are going to multiply all the numbers together
+                    }
+                }
+                return product;
+            }
+            var product = multiplyAll([[1,2],[3,4],[5,6,7]]); // this will output 5040 because we multiplied all the numbers in the array together.
+            console.log(product);
+
+        // Iterate with Do...While Loops
+            var myArray = [];
+            var i = 10;
+
+            do {
+                myArray.push(i);
+                i++
+            } while (i < 5)
+
+            console.log(i, myArray); // now "(i)" is "11" and the array has "10" added to it.
+
+            //Profile Lookup
+
+            var contacts = [
+                {
+                    "firstName": "Akira",
+                    "lastName": "Laine",
+                    "number": "0543236543",
+                    "likes": ["Pizza", "Coding", "Brownie Points"]
+                },
+                {
+                    "firstName": "Harry",
+                    "lastName": "Potter",
+                    "number": "0994372684",
+                    "likes": ["Hogwarts", "Magic", "Hagrid"]
+                },
+                {
+                    "firstName": "Sherlock",
+                    "lastName": "Holmes",
+                    "number": "0487345643",
+                    "likes": ["Intriguing Cases", "Violin"]
+                },
+                {
+                    "firstName": "Kristian",
+                    "lastName": "Bos",
+                    "number": "Unknown",
+                    "likes": ["JavaScript", "Gaming", "Foxes"]
+                }
+            ];
+
+            function lookUpProfile(name, prop) {
+                for (var i = 0; i < contacts.length; i++){
+                    if(contacts[i].firstName === name) {
+                        return contacts[i][prop] || "no such property"; // if the name is in the contacts list the value will be return value of the property that was past in
+                    }
+                }
+                return "No such contact"; //if it isnt in the array this will return
+            }
+
+            var data = lookUpProfile("Sherlock", "number")
+            console.log(data); // now this will say "0487345643"
+
+        //Generate Random Fractions
+            function randomFraction() {
+                return Math.random();// this will return a number looking a little like this "0.23813741879825767"
+            }
+            
+        //Generate Random Whole Numbers
+            var randomNumberBetween0and19 = Math.floor(Math.random() * 20); //"Math.floor" this rounds down to the nearest whole number. and this will give us a random number between "0" and "20" not including "20" so "0"-"19"
+            
+            function randomWholeNum() {
+
+
+                return Math.floor(Math.random() * 10); // random number between "0" and "9"
+            }
+
+            console.log(randomWholeNum()) // this will say a random number between "0" and "9"
+
+        //Generate Random Whole Numbers within a Range
+            function randomRange(ourMin, ourMax) {
+                
+                return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;    
+            }
+
+            var myRandom = randomRange(5, 15);
+            console.log(myRandom)  //this will give a random number between "5" and "15"
+        
+        //Use the parseInt Function
+            function convertToInteger(str) {
+                return parseInt(str); // this will turn a string into a number
+            }   
+            
+            convertToInteger("56";) //this will be returned as "56"
+
+        // Use the parseInt Function with a Radix
+            function convertToInteger(str) { //the radix specifies the base of the number in the string.  Base 2 (binary) is common to use with computers. The default is base "10"(decimals) that is what is used every day.
+                return parseInt(str, 2) //and we put "2" in the end.
+            }
+            convertToInteger("10011";) // now the computer knows it is binary
+
+        //Use the Conditional (Ternary) Operator
+                            //The Ternary Operator looks like this --->  condition ? statement-if-true : statement-if-true;
+            function checkEqual(a, b) {
+                return a === b ? true : false // this wouldnt be used IRL but its just an example. because you can just do this instead
+
+                (return a === b;)
+            }
+            checkEqual(1,2)
+
+        //Use Multiplbe Conditional (Ternary) Operators 
+            function checkSign(num) {
+                return num > 0 ? "positive" : num < 0 ? "negative" : "zero"
+            } // after the first Teranry (positive) if it's not positive it runs the second Ternary Operator with (negative) and (false).
+
+            console.log(checkSign(10))j // this will return postitive.
+
+        //Diffrence Between the var and let Keywords
+            // let does not let you declare a variable twice. and if you have a duplicate name it will show as a error in the console
+            // it is also possible to use "use strict" to catch coding mistakes.
+
+        //Compare Scoper of the var and let Keywords
+            //when you declare a variable with var it is declared globally or locally if declared inside a function. 
+            //However let's scope is limited to the block statement or expression that it was declared in. 
+
+            function checkScope() {
+            "use strict";
+                let i = "function scope";
+                if (true) {
+                  let i = "block scope";
+                    console.log("Block scope i is: ", i)
+                } 
+                console.log("Function scope i is: ", i)
+                return i;
+            }
+
+            checkScope(); //This will say Block scope i is: ,"block scope" //now since we used let it will be diffrent but if we used var both would have been the same
+                                        Function scope i is: ,"function scope"
+
+        //Declare a Read-Only Variable with the const Keyword
+            function printManyTime(str) {
+              "use strict";
+
+                const SENTENCE = str + " is cool!"; // const has all the features of let but it is read-only, you can not reassign const.
+
+                for(let i = 0; i < str.length; i+=2) {
+                    console.log(SENTENCE) //common to use all capital letter when declaring a const, and is a good way to remember that it is a const
+                }
+
+            }
+            printManyTimes("HouseMaster"); //this will say "HouseMaster is cool" 
+
+
+        // Mutate an Array Declared with const
+            const s = [5, 7, 2];
+            function editInPlace() {
+                "use strict";
+
+                // s = [2, 5, 7] this will not work
+                s[0] = 2;
+                s[1] = 5;
+                s[2] = 7; 
+                //this will reassing the array
+            }
+            editInPlace();
+            
+            console.log(s); //this will say "[2, 5, 7]"
+
+        //Prevent Object Mutation
+            function freezeObj() { //Object.freeze wil prevent data mutation.
+                "use strict";
+                const MATH_CONSTANTS = {
+                    PI: 3.14
+                };
+
+                Object.freeze(MATH_CONSTANTS); //Now MATH.CONSTANTS is frozen. So when it tries to change MATH_CONSTANTS.PI to 99 it wont work and is going to log out the error 
+
+                try {
+                    MATH_CONSTANTS.PI = 99;
+                } catch( ex )  {
+                    console.log(ex); // this will log out "TypeError: cannot assign to read only property 'PI' of object '#<Object' (/indeex.js:1015)"
+                }
+                return MATH_CONSTANTS.PI; //So whenever you have an object and you don't want any of the items in the object to change, you use Object.freeze.
+            }
+
+            const PI = freezeObj();
+            
+            console.log(PI); //it will stay the same "3.14".
+
+        
+        //Use Arrow Functions to Write Concise Anonymous Functions
+            var magic = fucntion() { //This function here is called an Anonymous function, it doesn't have a name. it is assign to the variable magic, but there is no word right before the function keyword to assign the name to the function.
+                                    //you can convert an anonymous function into an arrow function. that makes it a little quicker to write
+                return new Date(); // if we are returning one value here we dont need the return or the curly braces. 
+
+                const magic = () => new Date(); //This is the same function as before just very shorten up.  
+            };
+
+
+        //Write Arrow Functions with Parameters
+            const myConcat = (arr1, arr2) => arr1.concat(arr2); //  the parameters is in parenthesis and after that comes the arrow then what is being returned right after the arrow
+        
+
+            console.log(myConcat([1, 2], [3, 4, 5])); // when this runs i can concatenate the two arrays inside the console log 
+            
+        //Write Higher Order Arrow Functions
+            const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+
+            const sqyareList = (arr) => {
+                const squaredInteger = arr.filter(num => number.isInteger(num) && num > 0).map(x => x * x); // we can pass in an arrow function and it makes it so we can fit everyhing really on one line
+                return sqareIntegers;
+            };
+
+            const squaredInteger = sqareList(realNumberArray);
+            console.log(squaredIntegers); //This will give you [16, 1764, 36]
+
+        //Write Higher Order Arrow Function
+            const incremnt =(function()) {
+                return function increment(number, value = 1) { // here are the numbers we are passing inn, a number and a value. and if a value has not been passed in it will default to one
+                    return number + value;
+                };
+            })();
+            console.log(increment(5, 2)); // we wanna change the increment function so that you can pass in two arguments the "5" and "2" to increment by to
+            console.log(incremetn(5)); // or just put in the one argument the "5" if you wanna increment by one
+            // and we will have "7" for the first ona and "6" for the second
+ 
+        //Use the Rest Operator with Function Parameters
+            const sum = (function() {
+                return function sum(...arg) { //The rest operator is just "...arg" and now that we use the rest operator we can add any number of numbers
+                    return args.reduce((a, b) => a + b, 0);
+                };
+            })();
+            console.log(sum(1, 2, 3)); //this will be 6 
+             console.log(sum(1, 2, 3, 4));// before we could only pass in 3 argument. but now  we can just add any number of numbers. soo this will be "10"
+
+
+        //Use the Spread Operator to Evaluate Arrays In-Place
+            //the Spread Operator look just like the Rest Operator, three dots. but it expands already exiting array or it Spreads Out an array. So it takes an array and spreads it out into its individual parts.  //It only work with a argument to a function or in a array literal.
+            const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+            let arr2    
+            (function() { 
+                arr2 = [...arr1]; //this is not making arr2 equal to arr1. this is making arr2 equal all of the contents of arr1 so they will be diffrent. 
+                arr1[0] = 'potato'
+            })();
+            console.log(arr2); // this will output ['JAN', 'FEB', 'MAR', 'APR', 'MAY']
+
+        
+            //Destructuring Assignments
+
+        //Use Destructuring Assignment to Assign Variables from Objects.
+            var voxel = {x: 3.6, y: 7.4, z: 6.54} //this is a object with three elements
+
+            var x = voxel.x // x = 3.6 //This is the old way
+            var y = voxel.y // y = 7.4
+            var z = voxel.z // z = 6.54 
+
+            //Destructuring is a simpler and quicker way to assign variables for each element in a object
+            const { x : a; y : b, z : c } = voxel; // you can read it like this //Get the field of "x" and ":" copy into value "a", Get the field of "y" and ":" copy into value "b", Get the field of "z" and ":" copy into value "c"  
+
+            //Now you are going to use destructuring to obtain the average temperatur for tomorrow from the input object AVG_TEMPERATURES.
+            const AVG_TEMPERATURES = {
+                today: 77.5,
+                tomorrow: 79
+            };
+
+            function getTempOfTmrw(avgTemperatures) {
+                "use strict";
+
+                const { tomorrow : tempOfTomorrow } = avgTemperatures; // this is saying: get the tomorrow field from the AVG_TEMPERATURES object and assign it the tempOfTomorrow variable.
+
+                return tempOfTomorrow;
+            }
+
+            console.log(getTempOfTmrw(AVG:TEMPERATURES)); //should be 79. so you got the tomorrow variable out of the AVG_TEMPERATURES
+
+        //Destructuring Assignment with Nested Objects
+            const LOCAL_FORECAST = {
+                today: {min: 72}, max: 83 },
+                tomorrow: { min: 73.3, max: 84.6 }
+            };
+
+            function getMaxOfTmrw(forecast) {
+                "use strict";
+
+                //you first get tomorrow, after the colon its curly braces because it is nested. so we need to go inside of the tomorrow object and we need the max and then a colon and maxOfTomorrow then two sets of curlybraces to close it.
+                const { tomorrow :  {max : maxOfTomorrow}} = forecast; // the variable is maxOfTomorrow, so we set the max that was inside tomorrow to maxOfTomorrow.
+
+                return maxOfTomorrow;
+            }
+            console.log(getMaxOfTmrw(LOCAL_FORECAST)); // so when i run this it will say "84.6"
+
+        //Use Destructuring Assignment to Assing Variables from Arrays
+            const [z, x, , y] = [1, 2, 3, 4, 5, 6];
+            console.log(z, x, y); // this will give you 1,2,4
+
+            // you can use destructuring of arrays to switch the places of variables.
+            // now we are going to switch the place of a and b. it will be like this
+            let a = 8, b = 6
+            (() => {
+                "use strict";
+                [a, b] = [b, a]
+            })();
+        
+            console.log(a);
+            console.log(b)
+            //this will log "6"and "8" with 1,2,4 over
+
+        //Use Destricturing Assignment with the Rest Operator // to reassign array elements
+            const source = [1,2,3,4,5,6,7,8,9,10]; 
+            function removeFirstTwo(list) {
+
+                const [ , , ...arr] = list; // This says do nothing for the first element, do nothing for the second element, everything else put into the arr variable.
+
+                return arr;
+            }
+            const arr = removeFirstTwo(source);
+            console.log(arr); // this will say [3, 4, 5, 6, 7, 8, 9, 10]
+            console.log(source); //this will output [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        //Use Destructuring Assignment to Pass an Object as a Functions's Parameters
+            const stats = {
+                max: 56.78,
+                standard_deviation: 4.34,
+                median: 34.54,
+                mode:23.87,
+                min: -0.75,
+                average: 35.85
+            };
+            const half = (function() {
+                
+
+                return function half({ max, min }) { //instead of passing the entire stats into the function, so instead of that we can just use curly braces and put in "max" and "min".
+                                                    So now when the stats get passed in it's destructured into just the max and min variables.
+
+                    return (max + min) / 2.0; // this will work exactly as before but now we only pass in what we need. 
+                };
+
+            })();
+            //this will output 
+            console.log(stats); // This will output "{max: 56.78, standard_deviation: 4.34, median: 34.54, mode:23.87, min: -0.75, average: 35.85}"
+            console.log(half(stats)); // This will output: "28.015"
+
+            // The above is commonly used with API calls, when you are getting information from an Ajax request or an API request, 
+            // it will often have a lot more information than what you need. And you can use destructuring to get it down to what we actually want to work with.
+
+            //template Literals 
+
+            //Template Literals are a special type of string that makes creating complex strings easier. Here is an example of a Template Literal 
+
+        //Create String using Template Literals
+            const person = {
+                name: "Zodiac Hasbro",
+                age: 56
+            };
+            // we use backticks here. and backticks is great for multi-line strings.
+            const greeting = `Hello, my name is ${person.name}!
+            I am ${person.age} years old.`;
+
+            console.log(greeting); // This will say Hello, my name is Zodiac Hasbro! i am 56 years old.
+
+            //Coding Challenge 
+
+            const result = {
+                success: ["max-length", "no-amd", "prefer-arrow-functions"],
+                failure: ["no-var", "var-on-top", "linebreak"],
+                skipped: ["id-blacklist", "no-dup-keys"]
+            };
+            function makeList(arr) {
+                const resultDisplayArray = null;
+                for (let i = 0; i < arr.length; i++) {
+                    resultDisplayArray.push(`<li class="text-warning">${arr[i]}</li>`)
+                }
+                return resultDisplayArray;
+            }
+
+            makeList(result.failur) should return: [ `<li class="text-warning">no-var</li>`,
+                                                     `<li class="text-warning">var-on-top</li>`,
+                                                     `<li class="text-warning">linebreak</li>` ]
+            
+
+            const resultDisplayArray = makelist(result.failure); 
+            console.log(resultDisplayArray) //This will return  
+
+        //Write Concise Object Literal Declarations Using Simple Fields
+            const createPerson = (name, age, gender) => {
+
+                return {
+                    name: name,
+                    age: age,
+                    gender: gender
+                };
+
+            };
+        console.log(createPerson("Zodiac Hasbro", 56, "male")); //This will return "{name: "Zodiac Hasbro", age: 56, gender: "male"};"
+        //here is what you can do if you know that you want to create an object where the key is the name of the variable and the value is the value of the variable, this is the easier way to do it
+
+        const createPerson = (name, age, gender) => ( { name, age, gender }); 
+        // JavaScript knows that it's going to return this object and it's going to have three key value pairs, the name, age and gender. so if you try this
+        console.log(createPerson("Zodiac Hasbro", 56, "male"));  // this code does the same thing that the previous code did
+
+        //Write Concise Declarative Functions
+            const bicycle = {  //This is the long way to put a function within an object. there is a simpler way
+                gear: 2, 
+                setGear: function(newGear) {
+                    "use strict";
+                    this.gear = newGear;
+                }
+
+            };  
+            bicycle.setGear(3);
+            console.log(bicycle.gear);
+
+            //simpler way
+            const bicycle = { 
+                gear: 2, 
+                setGear(newGear) { //instead of using the function keyword and the colon, you can just delete all that. and have it like this "setGear(newGear)"
+                    "use strict";
+                    this.gear = newGear;
+                }
+
+            };  
+            bicycle.setGear(3);
+            console.log(bicycle.gear); // this will show "3" in the console.
+
+
+        //Use class Syntax to Define a Constructor Function
+            //ES6 provides a syntax to createobjects using the class keyword. 
+            //So, here's the older way to create an object. it's with the new keyword.
+            //We can instantiate an object using this new keyword. And we're instantiating the SpaceShuttle object.
+            //We have to have this constructor function up here. So we use this to construct the object. Where we pass in the target planet, 'Jupiter'.
+            //And we set the targetPlanet of this.targetPlanet. Once we create the new object like this, that allows us to do zeus.targetPlanet.
+            //so zeus.targetPlanet which we set to Jupiter. So, in the console we can set to Jupiter 
+
+            var SpaceShuttle = function(targetPlanet){
+                this.targetPlanet = targetPlanet;
+            }
+            var zeus = new SpaceShuttle('Jupiter');
+            
+            console.log(zeus.targetPlanet)
+
+            //The class syntax replaces the constructor function creation. 
+            class SpaceShuttle {
+                constructor(targetPlanet){
+                    this.targetPlanet = tagetPlanet;
+                }
+                
+            }
+            var zeus = new SpaceShuttle('Jupiter');
+
+            console.log(zeus.targetPlanet)
+
+            //Another example
+
+            function makeclass() {
+                class Vegetable {
+                    constructor(name){
+                        this.name = name;
+                    }
+                }
+                return Vegetable;
+            }
+            const Vegetable = makeClass();
+            const carrot = new Vegetable('carrot');
+
+            console.log(carrot.name); //So now this will output "carrot"
+
+        //Use getters and setters to Control Access to an Object
+            //With a class object you often want to obtain values from the object and set a value of a property within a object.
+            //This are often called getters and setters. So in this class object, we have the constructor which we already talked about.
+            //We also have a getter and setter to get and set the writer. So we can get the writer and we can set the writer. 
+            //Getter functions are meant to simply return or get the value of an object's private variable to the user without the user directly accessing the private variable.
+            //So, the private variable is this._author that gets set when you construct the object. And then when we do get writer it's going to return this._author. 
+            //So, you never actually interact directly with this variable, but it's going to get the writer which is the author here. And when you're setting, it's the same.
+            //So, you're never interacting with the._author, but you can set that with the writer setter. This change could invoke calculations or even overriding the previous value completely.
+            //So, you can have any number of code lines in this setter to ultimately maybe do different calulations before you set it or calculations before you get the property.
+            //So, what we're going to do is make our own getter and setter for the Thermostat class.
+
+
+            class Book {
+                constructor(author) {
+                    this._author = author;
+                }
+                //getter
+                get writer(){
+                    return this._author;
+                }
+                //setter
+                set writer(updatedAuthor) {
+                    this._author = updatedAuthor;
+                }
+            }
+            
+            //we're going to create a Thermostat class and we're going to have a getter and a setter. So, here's the thing about this challenge, is that when we construct the class, 
+            //it's going to accept Fahrenheit temperature,but we're going to create a getter and setter in the class to obtain the temperature in Celcius.
+            //So it's going to have to do the calulation right within the class. So, let's do that.
+            
+            //We are going to do a class of Themostat.
+            //and in this class we need the constructor. When you first create the Thermostat you're going to pass in a temperature. This is going to be in fahrenheit.
+            //Now within this constructor, we're going to set a private variable. "this._temp". So, the word this just means that this variable is only accessible within this class here.
+            //When you start a variable with an underscore that's generally going to signify that it's a private variable. That you're not supposed to access it outside of that scope or outside of that class.
+            //So, we're going to set the temp. And we're not going to just put "this._temp = temp" because it's passed in as a Fahrenheit and we want to convert it to Celcius.
+            //The equation for Celsius is "5/9 * (temp - 32)" So, now we can create the getter and setter, so for getter we'll do get temperature. And we're just going to return this._temp
+            //Which now it's in Celsius because we're storing the value in Celsius. even though the themostat is created in fahrenheit. So, with the setter, it's going to be the same.
+            //
+
+
+            function makeClass() {
+                class Thermostat {
+                    constructor(temp) {
+                        this._temp = 5/9 * (temp - 32)
+                    }
+                    //getter
+                    get temperature(){
+                        return this._temp;
+                    }
+                    //setter
+                  set temperature(updateTemp){
+                    this._temp = updatedTemp;
+                  }
+                }
+                return Thermostat;
+            }
+
+            //So, let's look at the code down here, how we're using it. So, the const Thermostat = makeClass(). This makeClass function is going to return this thermostat object here.
+            //And then we're going to do const thermos = new Thermostat. So, when you're instantiating an object you always use the new keyword. new thermostat, that's this on top, And we're passing in 76.
+            //That goes into the constructor, the temp. And so we do this calculation to convert that Fahrenheit to the Celsius in this local variable here("this._temp").
+            //And then "let temp = thermos.temperature". So, "thermos.temperature" is going to use the getter, get temperature, and it's going to return this._temp.
+            //So, a key thing to look at is that there are now paranthesis after this. So, generally if something is a function you would see parenthesis after the function name,
+            //but if it's a variable or a property name, it's going to not have parenthesis. So, getters and setters are accessed similar to properties. 
+            //And then we can use the setter here, thermo.temperature= 26, and then it sets it with the updated temperature. And now we can say temp = thermos.temperature.
+
+
+            const Thermostat = makeClass();
+            const thermos = new Thermostat(76);
+            ket temp = thermos.temperature;
+            thermos.temperature = 26;
+            temp = thermo.temperature;
+            console.log(temp) //This should have the new temperature "26"
+
+        //
+            
+        */</script>
 </body>
+
 </html>

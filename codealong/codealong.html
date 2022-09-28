@@ -29,7 +29,10 @@
                 if(inputString.charAt(i)=='a')
                 // counteren teller opp for hver gang if setningen kjøres
                 counter++
-                else(inputString.charAt(i).toUpperCase=='a')
+                else if (inputString.charAt(i)=='A') {
+                    counter++
+                }
+                
                  
             }
             document.getElementById('mainDiv').innerHTML = '<li>' + counter + '</li>';

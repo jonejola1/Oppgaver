@@ -1,0 +1,132 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    background-image: url("https://media.istockphoto.com/vectors/vector-realistic-isolated-green-poker-table-for-decoration-vector-id1299608766?k=20&m=1299608766&s=612x612&w=0&h=ZwlBIc1B5noT2uVZG9yighu1FLc5NoeWrk3KloKsdKM=");
+    background-size: cover;
+    color: white;
+    font-weight: bold;
+
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+h1 {
+    color: goldenrod;
+}
+
+#message-el {
+    font-style: italic;
+}
+
+button {
+    background-color: goldenrod;
+    color: #016f32;
+    width: 150px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.loanShark{
+    position: fixed;
+    padding: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1%;
+    background-color: rgba(0, 0, 0, 0.865);
+}
+
+.loanShark button{
+    color: black;
+}
+
+.loanShark img{
+    height: 800px;
+}
+
+.loan_timer{
+    color: red;
+}
+
+.Mike{
+    position: fixed;
+    padding: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1%;
+    background-color: rgba(0, 0, 0, 0.865);
+    
+}
+
+.Mike button{
+    color: black;
+}
+
+.Mike img{
+    height: 800px;
+}
+
+.game_over{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+}
+
+.Saul{
+    position: fixed;
+    padding: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1%;
+    background-color: rgba(0, 0, 0, 0.865);
+}
+
+.Saul button{
+    color: black;
+}
+
+.Saul-img{
+    height: 800px;
+}
+
+
+
+button{
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.desc{
+    position: absolute;
+    color: white;
+    background-color: rgb(184, 170, 26);
+    border-radius: 10px;
+    font-size: small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    top: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 10px;
+    overflow: hidden;
+    color: transparent;
+}
+
+.desc:hover{
+    width: 180px;
+    height: auto;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.79);
+}
