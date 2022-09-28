@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    <script>
+
+        //Model
+        let itemList = [];
+        let item = '';
+        let addItems = '';
+
+        //View
+        updateView()
+        function updateView() {
+            let html = ''
+            html = /*HTML*/ `
+            <div>
+                ShoppingCart:
+                ${addItems}
+            </div>
+                
+            <div>
+                <input onchange="item = this.value" type="text">
+                <button onclick="addItem()">Add to cart</button>    
+            </div>
+            `
+
+            document.getElementById('app').innerHTML = html;
+        }
+
+        console.log(item)
+        
+        //Controller
+        function addItem() {
+            itemList.push(item); //this pushes the input value onto the array
+            
+            for(let i = 0; i < itemList.length; i++){
+                addItems += `<li>${itemList[i]}</li>`; //this adds the item to the shopping cart inside a list.
+            }
+
+            console.log(itemList)
+            itemList.pop(item) //this removes the item from the array after the item has been adden into the shopping cart and removes multiplication of the code.
+
+            updateView()
+            console.log(itemList)
+
+        }
+
+        //push inputverdien in i arrayet så oppdater med mini intro til loop av array videoen.
+    </script>
+</body>
+</html>

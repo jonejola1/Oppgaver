@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    <script>
+
+        let persons = [
+            'Per',
+            'Pål',
+            'Espen'
+        ];
+
+        let numbers = [ 1, 5, 8, 9];
+
+
+        persons[3] = 'Askeladden';
+
+        show();
+        function show() {
+            let html = ''
+
+            // html += `<li>${persons[0]}</li>`;
+            // html += `<li>${persons[1]}</li>`;
+            // html += `<li>${persons[2]}</li>`;
+            console.log(persons)
+            console.log(numbers)
+            for(let i = 0; i < persons.length; i++){
+                html += `<li>${persons[i]}</li>`;
+            }
+            console.log(persons)
+            console.log(numbers)
+            for(let i in numbers){
+                html += `<p>${persons[i]}</p>`;
+            }
+            console.log(persons)
+            console.log(numbers)
+            for(let i of persons){
+                html += i + '<br>';
+            }
+            console.log(persons)
+            console.log(numbers)
+            document.getElementById('app').innerHTML = html;
+        }
+    </script>
+</body>
+</html>
+

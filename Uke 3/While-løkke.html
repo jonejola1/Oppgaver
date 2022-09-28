@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <button onclick="randomGenerate()">Generate</button>
+            <div>denne leter igjennom 10000 tall</div>
+        </div>
+        <div id="info">
+           
+        </div>
+    </div>
+
+    <script>
+        //model
+        let num1 = 0;
+        let num2 = 1;
+
+        function randomGenerate() {
+            while (num1 !== num2) {
+                num1 = Math.ceil(Math.random() * 10000);
+                num2 = Math.ceil(Math.random() * 10000);
+                document.getElementById('info').innerHTML = 'Searching Database...'
+                if (num1 === num2) {
+                    document.getElementById('info').innerHTML = 'Equal Numbers Found: ' + num1 + ' ' + num2;
+                } 
+                
+                
+                console.log(num1)
+                console.log(num2)
+            }
+            
+            
+        }
+
+    </script>
+
+</body>
+
+</html>
+<!-- Lag en funksjon som generer 2 random tall så lenge tallene er ulike fra hverandre. 
+Når de er like print ut teksten "Equal numbers found" - samt hvilke tall det ble =)
+kan eventuelt også console.log() tallene for hver runde
+OBS: Nettleseren er ikke glad i å oppdatere view mens i en while-loop! -->

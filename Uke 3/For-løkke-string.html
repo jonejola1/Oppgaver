@@ -8,21 +8,53 @@
 </head>
 <body>
     <div>
+        <input type="text" onchange="inputTekst = this.value" />
+        <button onclick="printLetters(inputTekst)">Print letters</button>
+        
         <div id="letters"></div>
-        <input  onchange="printLetters(this)"><button onclick="printLetters('Hei på deg')">Print letters</button>
     </div>
     <script>
+
+        let aCounter = 0;
+        let eCounter = 0;
+        let iCounter = 0;
+        let oCounter = 0;
+        let uCounter = 0;
+        let æCounter = 0;
+        let øCounter = 0;
+        let åCounter = 0;
+        let inputTekst = ''; 
         // legg til et mellomrom mellom hvert tegn i tekst stringen
         // H e i p å deg
         // 0 1 2 3
-        function printLetters(inputString){
+        function printLetters(str){
             let text = '';
             // document.getElementById("letters").innerHTML += inputString;
-            for(let index=0; index<=inputString.length; index++){
-                text = text + inputString.charAt(index) + ' ';
-            }
-            document.getElementById("letters").innerHTML = text;
+            for(let i = 0; i <= str.length; i++){
+                text = text + str.charAt(i); 
+                if(str.charAt(i) == 'a') {aCounter++}
+                if(str.charAt(i) == 'e') {eCounter++}
+                if(str.charAt(i) == 'i') {iCounter++}
+                if(str.charAt(i) == 'o') {oCounter++}
+                if(str.charAt(i) == 'u') {uCounter++}
+                if(str.charAt(i) == 'æ') {æCounter++}
+                if(str.charAt(i) == 'ø') {øCounter++}
+                if(str.charAt(i) == 'å') {åCounter++}
+            } 
+            document.getElementById("letters").innerHTML = text;    
+            console.log("antall a = " + aCounter)
+            console.log("antall e = " + eCounter)
+            console.log("antall i = " + iCounter)
+            console.log("antall o = " + oCounter)
+            console.log("antall u = " + uCounter)
+            console.log("antall æ = " + æCounter)
+            console.log("antall ø = " + øCounter)
+            console.log("antall å = " + åCounter)
         }
+        function clearAfter() {
+            
+        }
+        // e = 6 i = 3 å = 1
     </script>
 </body>
 </html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div>
+        <div id="poeng">poeng:</div> <br>
+        <!-- <div id="bilde"><img src="img/krokodille.jpg"/></div> -->
+        <div id="num1">0</div>
+        <input id="svarFelt" type="text" onchange="answer = this.value"> <br>
+        <div id="num2">0</div><br>
+        <button onclick="check('answer')">Submit</button>
+        <button id="resetBtn" onclick="generateNewNumbers()">Reset</button>
+    </div>
+    <script>
+
+        let Points = 0
+
+        let num1 = 0;
+        let num2 = 0;
+
+        let answer;
+
+
+        function generateNewNumbers() {
+                num1 = Math.round(Math.random() * 10)
+                num2 = Math.round(Math.random() * 10)
+            updateNumbers();           
+        }
+
+        function updateNumbers() {
+            document.getElementById('num1').innerHTML = num1;
+            document.getElementById('num2').innerHTML = num2;
+            Points = '';
+            input = '';
+        }
+
+        function check() {
+            if(num1 == num2 && answer == '='){
+                Points++
+            }
+            if(num1 > num2 && answer == '>'){
+                Points++
+            }
+            if(num1 < num2 && answer == '<'){
+                Points++
+            }
+            if(num1 = num2 && answer != '=' ){
+                Points--
+            }
+            if(num1 > num2 && answer != '>'){
+                Points--
+            }
+            if(num1 < num2 && answer != '<'){
+                Points--
+            }
+            
+            updateNumbers()
+           document.getElementById('poeng').innerHTML = 'poeng: ' + Points;
+        }
+        
+
+    </script>
+</body>
+</html>
+<!-- Når du trykker reset-knappen genereres to random tall mellom 1-10
+
+Mellom tallene, må du ha et input felt. Her er det meningen at man skal sammenligne tallene og skrive riktig operator! 
+
+Når man trykker submit - må man sjekke at man har skrevet inn riktig tegn i input-feltet og oppdatere poengsummen. 
+Riktig svar plusser på 1 poeng, feil svar trekker fra et poeng.
+
+Bruk det du har lært hittil til å løse oppgaven ;) Lykke til!
+
+Ex:
+
+Dersom det første tallet er større enn det andre, må man skrive inn ">" for å få riktig svar, 
+dersom det første tallet er mindre enn må man skrive "<" og dersom tallene er like bruker man "=" -->
