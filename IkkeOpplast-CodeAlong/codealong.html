@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input id="textToString" type="text">
+        <!-- textToString er id til input og .value henter ut verdien til input text field -->
+        <button onclick="sjekkBokstaver(textToString.value); ">sjekk</button>
+        <div id="mainDiv"></div>
+    </div>
+
+    <script>
+        
+        function sjekkBokstaver(inputString){
+            let stopValue = inputString.length;
+            //let counter=0; ærklerer at if setningen skal begynne å telle fra null.
+            //counter er hvor mange  ganger a har blitt sett.
+            let counter = 0;
+            for(let i=0; i<stopValue; i++){
+                // inputString.charat blir true når den leser en a, da blir counteren
+                // kjørt og plusser på en. dette skjer med alle a'ene den oppdager
+                if(inputString.charAt(i)=='a')
+                // counteren teller opp for hver gang if setningen kjøres
+                counter++
+                else if (inputString.charAt(i)=='A') {
+                    counter++
+                }
+                
+                 
+            }
+            document.getElementById('mainDiv').innerHTML = '<li>' + counter + '</li>';
+        }
+
+    </script>
+
+</body>
+
+</html>

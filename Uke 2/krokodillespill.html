@@ -44,7 +44,7 @@
         }
 
         function resetScoreAndNumber() {
-            document.getElementById('svarFelt').value = ''; //jeg fiksa problem at første svar etter reset ikkefunket fordi det var et mellomrom inne i doc.svarfelt.value som gjorde at svart ble sendt med mellomrom.
+            document.getElementById('svarFelt').value = ''; //jeg fiksa et problem at første svar etter man har trukket reset ikke funket fordi det var et mellomrom inne i doc.svarfelt.value som gjorde at svart ble sendt med mellomrom.
             console.log(answer)
             Points = 0;
             answer = '';
