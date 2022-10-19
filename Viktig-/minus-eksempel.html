@@ -31,14 +31,14 @@ function minus(num1, num2, color) {
 
 <body>
     <div id="mainDiv"> </div>
-    <input class="box" type="number" onclick="equal(num1 = this.value)">
+    <input class="box" type="number" onchange="equal(num1 = this.value)">
     <label for="operator"></label>
-        <select name="operator" onchange="chooseOperator(this)">
+        <select name="operator" onchange="chooseOperator(operator = this.value)">
             <option value='+'>+</option>
             <option value='-'>-</option>
         </select>
-    <input class="box" type="number" onclick="equal(num2 = this.value)">
-    <button onclick="equal(num1, num2)">Equal</button>
+    <input class="box" type="number" onchange="equal(num2 = this.value)">
+    <button onclick="equal(num1, operator, num2)">Equal</button>
     <script>
         
         let operator = '';
@@ -47,21 +47,19 @@ function minus(num1, num2, color) {
         let answer = '';
         
         
-        function equal(num1, num2) {
+        function equal(num1, operator, num2) {
             if(operator == '+') {
-                answer = num1 += num2;
+               return answer = num1 += num2;
             }
-            else(operator == '-') 
-                answer = num1 -= num2;
+            else{
+                return answer = num1 -= num2;
+            } 
             
             
-            document.getElementById('mainDiv').innerHTML= `<div>${num1}, ${operator}, ${num2} equals = ${answer}</div>`;
         }
+
+        // document.getElementById('mainDiv').innerHTML= `<div>${num1}, ${operator}, ${num2} equals = ${answer}</div>`;
         
-        function chooseOperator(selectedOperator){
-            selectedOperator = ''
-            operator = selectedOperator;
-        }
             
 
         </script>

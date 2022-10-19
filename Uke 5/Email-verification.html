@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mainDiv">
+        <div>
+            <input type="text" id="Email" placeholder="Input Email here"
+                oninput="checkEmail(Email = this.value)"></input>
+        </div>
+    </div>
+
+    <script>
+        let Email = '';
+
+        function checkEmail(email) {
+            for (let i = 0; i < Email.length; i++) {
+
+                if (Email.indexOf(i) != '@') {
+                    console.log("there is no @");
+                    return;
+                }
+                if (Email.indexOf(i) != '.') {
+                    console.log("There is no .")
+                    return;
+                }
+                if (Email.indexOf(i) == ' ') {
+                    console.log("no spaces allowed in a email");
+                    return;
+                }
+                console.log("Email is confirmed")
+            }
+
+        }
+    </script>
+</body>
+
+</html>
