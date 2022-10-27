@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            float: left;
+        }
+        .choiceBoxes {
+            font-size: 20px;
+            background-color: aqua;
+            border: 2px solid gray;
+            padding: 10px;
+            margin: 10px;
+            width: 70px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 600;
+            color: brown;
+            font-size: 25px;
+            padding: 10px;
+            margin: 10px;
+            border:1px dashed rgb(121, 14, 14)
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainDiv"></div>
+
+    <script>
+        //model 
+        let firstPlaceholder = '__';
+        let secondPlaceholder = '__';
+        let thirdPlaceholder = '__';
+        let fourthPlaceholder = '__';
+
+
+
+        //view
+
+        view()
+        function view() {
+            document.getElementById('mainDiv').innerHTML = `
+        <p>Once, There was a ${firstPlaceholder} ${secondPlaceholder} that ${thirdPlaceholder} in the ${fourthPlaceholder} - and great things happend. The End.</p> <br>
+        <div>
+            <div class="choiceBoxes" onclick="setFirstPlaceholder('Green')">Green</div>
+            <div class="choiceBoxes" onclick="setFirstPlaceholder('Red')">Red</div> <br>
+            <div class="choiceBoxes" onclick="setSecondPlaceholder('Cat')">Cat</div> 
+            <div class="choiceBoxes" onclick="setSecondPlaceholder('Man')">Man</div> <br>
+            <div class="choiceBoxes" onclick="setThirdPlaceholder('Stared')">Stared</div>
+            <div class="choiceBoxes" onclick="setThirdPlaceholder('Jumped')">Jumped</div> <br>
+            <div class="choiceBoxes" onclick="setFourthPlaceholder('Pool')">Pool</div>
+            <div class="choiceBoxes" onclick="setFourthPlaceholder('Wall')">Wall</div>
+        </div>
+        `
+        }
+
+        //contoller
+        function setFirstPlaceholder(choice) {
+            firstPlaceholder = choice;
+            console.log('choice' + '(1)' + firstPlaceholder)
+            view()
+        }
+
+        function setSecondPlaceholder(choice) {
+            secondPlaceholder = choice;
+            console.log('choice' + '(2)' + secondPlaceholder)
+            view()
+        }
+
+        function setThirdPlaceholder(choice) {
+            thirdPlaceholder = choice;
+            console.log('choice' + '(3)' + thirdPlaceholder)
+            view()
+        }
+
+        function setFourthPlaceholder(choice) {
+            fourthPlaceholder = choice;
+            console.log('choice' + '(4)' + fourthPlaceholder)
+            view()
+        }
+
+    </script>
+</body>
+
+</html>
