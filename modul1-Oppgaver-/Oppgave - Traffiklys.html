@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blackBorder {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            background-color: black;
+            margin: auto;
+            padding: 5px;
+            border: 5px;
+            height: fit-content;
+            width: fit-content;
+        }
+        
+        .red {
+            background-color: gray;
+            border-radius: 50%;
+            margin: 5px;
+            padding: 5px;
+            width: 70px;
+            height: 70px;
+        }
+
+        .redLight {
+            background-color: red;
+            border-radius: 50%;
+            margin: 5px;
+            padding: 5px;
+            width: 70px;
+            height: 70px;
+        }
+
+        .yellow {
+            background-color: gray;
+            border-radius: 50%;
+            margin: 5px;
+            padding: 5px;
+            width: 70px;
+            height: 70px;
+        }
+
+        .yellowLight {
+            background-color: yellow;
+            border-radius: 50%;
+            margin: 5px;
+            padding: 5px;
+            width: 70px;
+            height: 70px;
+        }
+
+        .green {
+            background-color: gray;
+            border-radius: 50%;
+            margin: 5px;
+            padding: 5px;
+            width: 70px;
+            height: 70px;
+        }
+        
+        .greenLight {
+            background-color: green;
+            border-radius: 50%;
+            margin: 5px;
+            padding: 5px;
+            width: 70px;
+            height: 70px;
+        }
+
+        .buttonForStart {
+            display: flex;
+            position: relative;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="mainDiv"></div>
+    <script>
+        //model
+
+        //view  
+        view()
+        function view() {
+            view = `
+            <div class="blackBorder">
+                <div class="lights">
+                    <div class="red" type="button" onclick="setRed(this)"></div>
+                    <div class="yellow" type="button" onclick="setYellow(this)"></div>
+                    <div class="green" type="button" onclick="setGreen(this)"></div>
+                </div>
+            </div>
+            <div class="buttonForStart">            
+                <button onclick="startLight()">Start</button>
+            </div>
+            `
+            document.getElementById('mainDiv').innerHTML = view;
+        }
+
+        //controller
+        function setRed(item) { 
+            item.classList.toggle("redLight") //man må sende med 'this' fra div'en over for at classList.toggle skulle fungere. Da endrer du hele div'en du sender med til den classen du har configuert fra før av.
+            console.log('Red')
+            setTimeout(setRed)
+        }
+        function setYellow(item) {
+            item.classList.toggle("yellowLight")
+            console.log('Yellow')
+        }
+        function setGreen(item) {
+            item.classList.toggle("greenLight")
+            console.log('Green')
+        }
+        function startLight() {
+            $("button").click(function(){
+                $("div").addClass("redLight");
+            });
+        }
+
+    </script>
+</body>
+
+</html>
