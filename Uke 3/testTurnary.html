@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const output = document.getElementById('app')
+        let check = false;
+        let yesOrNo = 'yes';
+
+        updateView()
+        function updateView() {
+            let view = `
+                <div>
+                    <button onclick="checkYesOrNo()">Check if it works</button
+                </div>
+                ${yesOrNo}
+
+            `;
+            output.innerHTML = view;
+
+        }
+        function checkYesOrNo() {
+            check = !check
+
+            yesOrNo = check == false ? 'yes' : 'no';
+            updateView()
+        }
+
+    </script>
+</body>
+</html>

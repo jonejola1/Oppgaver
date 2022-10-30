@@ -85,7 +85,7 @@
 <body>
     <div id="mainDiv"></div>
     <script>
-        //model
+        //model 
 
         //view  
         view()
@@ -93,7 +93,7 @@
             view = `
             <div class="blackBorder">
                 <div class="lights">
-                    <div class="red" type="button" onclick="setRed(this)"></div>
+                    <div id="lightRed" class="red" type="button" onclick="setRed(this)"></div>
                     <div class="yellow" type="button" onclick="setYellow(this)"></div>
                     <div class="green" type="button" onclick="setGreen(this)"></div>
                 </div>
@@ -105,7 +105,7 @@
             document.getElementById('mainDiv').innerHTML = view;
         }
 
-        //controller
+        //controller  //start knappen fungerer ikke. kan bare trykke på lysene manuelt.
         function setRed(item) { 
             item.classList.toggle("redLight") //man må sende med 'this' fra div'en over for at classList.toggle skulle fungere. Da endrer du hele div'en du sender med til den classen du har configuert fra før av.
             console.log('Red')
@@ -120,9 +120,7 @@
             console.log('Green')
         }
         function startLight() {
-            $("button").click(function(){
-                $("div").addClass("redLight");
-            });
+            
         }
 
     </script>
