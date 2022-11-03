@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div {
+            display: flex;
+            position: absolute;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Ferdighet 12 - Funksjoner med returverdi</p>
+    <script>
+        tilfeldigFirkant();
+
+        function tilfeldigFirkant() {
+            let endX = tilfeldigTall(window.innerWidth * 0.2, window.innerWidth);
+            let endY = tilfeldigTall(window.innerHeight * 0.2, window.innerHeight);
+            
+
+            let startX = tilfeldigTall(1, endX * 0.8);
+            let startY = tilfeldigTall(1, endY * 0.8);
+            let bredde = endX - startX;
+            let høyde = endY - startY;
+            let farge = tilfeldigFarge();
+            let ordFarge = tilfeldigOrdFarge();
+            let divHtml = '<div style="' + 
+                delAvStylePx('left', startX) +
+                delAvStylePx('top', startY) +
+                delAvStylePx('width', bredde) +
+                delAvStylePx('height', høyde) +
+                delAvStyle('background-color', farge) +
+                delAvStyle('color', ordFarge) + 
+                '">' +
+                tilfeldigOrd() +
+                '</div>';
+            document.write(divHtml);
+            if (Math.random() < 0.9) tilfeldigFirkant();
+        }
+
+        function delAvStylePx(navn, verdi) {
+            return delAvStyle(navn, verdi + 'px');
+        }
+
+        function delAvStyle(navn, verdi) {
+            return navn + ':' + verdi + ';';
+        }
+
+        function tilfeldigFarge() {
+            return '#' +
+                tilfeldigTallEllerBokstavABCDEF() +
+                tilfeldigTallEllerBokstavABCDEF() +
+                tilfeldigTallEllerBokstavABCDEF() +
+                tilfeldigTallEllerBokstavABCDEF() +
+                tilfeldigTallEllerBokstavABCDEF() +
+                tilfeldigTallEllerBokstavABCDEF();
+        }
+
+        function tilfeldigOrdFarge() {
+            return tilfeldigFarge();
+        }
+        
+        function tilfeldigOrd() {
+            return tilfeldigBokstav() +
+            tilfeldigBokstav() + 
+            tilfeldigBokstav() +
+            tilfeldigBokstav() +
+            tilfeldigBokstav();
+        }
+
+        function tilfeldigTallEllerBokstavABCDEF() {
+            let tall = tilfeldigTall(0, 15);
+            if (tall < 10) return tall;
+            const charCodeA = 'a'.charCodeAt(0);
+            return String.fromCharCode(tall - 10 + charCodeA);
+        }
+        
+        function tilfeldigBokstav() {
+            let tall = tilfeldigTall(0, 25);
+            const charCodeA = 'a'.charCodeAt(0);
+            console.log(tall)
+            
+            if (tall === 25) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 24) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 23) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 22) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 21) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 20) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 19) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 18) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 17) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 16) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 15) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 14) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 13) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 12) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 11) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 10) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 9) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 8) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 7) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 6) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 5) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 4) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 3) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 2) return String.fromCharCode(tall + charCodeA);
+            else if (tall === 1) return String.fromCharCode(tall + charCodeA);
+            else {return String.fromCharCode(charCodeA);}
+                
+
+        }
+
+        function tilfeldigTall(minimum, maksimum) {
+            return minimum + ~~(Math.random() * (maksimum - minimum + 1));
+        }
+
+
+    </script>
+</body>
+
+</html>
