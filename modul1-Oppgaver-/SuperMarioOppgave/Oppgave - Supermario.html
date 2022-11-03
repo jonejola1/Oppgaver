@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="styleSheet" href="Supermario.css">
+</head>
+
+<body>
+    <div>
+        <img id="mario" onclick="selectCharacter('mario', this)" src="img/mario.png">
+        <img id="luigi" onclick="selectCharacter('luigi', this)" src="img/luigi.png">
+        <img id="peach" onclick="selectCharacter('peach', this)" src="img/peach.png">
+        <img id="yoshi" onclick="selectCharacter('yoshi', this)" src="img/yoshi.png">
+        <br>
+        <hr>
+        <img id="selectedChar">
+        <img id="toadShroom" onclick="toadHealth()" src="img/toad.png">
+        <br>
+        <button id="atkBowser" onclick="attackChar('player')">Attack Bowser</button>
+
+        <div>Character HP
+            <div id="healthPoints"></div>
+        </div>
+    </div><br>
+    <hr>
+    <p id="winner"></p>
+    <hr>
+    <div><br>
+        <div>Bowser HP
+            <div id="bowserHealthPoints"></div>
+        </div>
+        <button id="atkPlayer" onclick="attackChar('bowser')">Attack player</button>
+        <br>
+        <img id="bowser" src="img/bowser.png">
+        <img id="bwsShroom" onclick="bwsHealth()" src="img/bwsmush.png">
+    </div>
+
+
+    <script src="SuperMarioJS.js">
+    </script>
+</body>
+
+</html>

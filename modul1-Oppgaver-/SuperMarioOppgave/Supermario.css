@@ -1,0 +1,39 @@
+#winner {
+    font-size: 20px;
+}
+
+#mario {
+    width: 300px;
+}
+
+#luigi {
+    width: 150px;
+
+}
+
+#peach {
+    width: 220px;
+}
+
+#yoshi {
+    width: 220px;
+}
+
+#bowser {
+    width: 400px;
+}
+
+#toadShroom {
+    width: 100px;
+    height: 100px;
+}
+
+#bwsShroom {
+    width: 150px;
+    height: 200px;
+}
+
+#selectedChar {
+    width: 150px;
+    height: 150px;
+}
