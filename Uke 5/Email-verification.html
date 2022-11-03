@@ -20,22 +20,20 @@
         let Email = '';
 
         function checkEmail(email) {
-            for (let i = 0; i < Email.length; i++) {
-
-                if (Email.indexOf(i) != '@') {
+                if (email.indexOf("@") == -1) {
                     console.log("there is no @");
                     return;
                 }
-                if (Email.indexOf(i) != '.') {
+                if (Email.indexOf(".") == -1) {
                     console.log("There is no .")
                     return;
                 }
-                if (Email.indexOf(i) == ' ') {
+                if (Email.indexOf(" ") == 1) {
                     console.log("no spaces allowed in a email");
                     return;
                 }
-                console.log("Email is confirmed")
-            }
+                console.log("Valid Email.");
+            // }
 
         }
     </script>
