@@ -73,23 +73,21 @@ function attackChar(attacker) {
 function showWinner() {
     if (characterHp <= 0) {
         document.getElementById('winner').innerHTML = `${selectedCharacter} lost`;
-        disabledBtn = true;
     } else if (bowserHp <= 0) {
         document.getElementById('winner').innerHTML = `${selectedCharacter} Won`;
-        disabledBtn = true;
     } else {
         document.getElementById('winner').innerHTML = ``;
     }
-    changeBtn();
+    changeBtn()
 }
 
 function changeBtn() {
-    if (characterHp <= 0 && disabledBtn === true || bowserHp <= 0 && disabledBtn === true) {
-        document.getElementById('atkPlayer').disabled = true
-        document.getElementById('atkBowser').disabled = true
+    if (characterHp <= 0 || bowserHp <= 0 ) {
+        atkPlayer.disabled = true
+        atkBowser.disabled = true
     } else {
-        document.getElementById('atkPlayer').disabled = false
-        document.getElementById('atkBowser').disabled = false
+        atkPlayer.disabled = false
+        atkBowser.disabled = false
     }
     console.log(disabledBtn)
 }
