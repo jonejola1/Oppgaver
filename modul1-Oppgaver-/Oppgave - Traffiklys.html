@@ -98,18 +98,14 @@
                     <div class="green" type="button" onclick="setGreen(this)"></div>
                 </div>
             </div>
-            <div class="buttonForStart">            
-                <button onclick="startLight()">Start</button>
-            </div>
             `
             document.getElementById('mainDiv').innerHTML = view;
         }
 
-        //controller  //start knappen fungerer ikke. kan bare trykke på lysene manuelt.
+        //controller  //kan bare trykke på lysene manuelt.
         function setRed(item) { 
             item.classList.toggle("redLight") //man må sende med 'this' fra div'en over for at classList.toggle skulle fungere. Da endrer du hele div'en du sender med til den classen du har configuert fra før av.
             console.log('Red')
-            setTimeout(setRed)
         }
         function setYellow(item) {
             item.classList.toggle("yellowLight")
@@ -119,9 +115,7 @@
             item.classList.toggle("greenLight")
             console.log('Green')
         }
-        function startLight() {
-            
-        }
+        
 
     </script>
 </body>

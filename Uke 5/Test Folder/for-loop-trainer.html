@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For-Loops</title>
+    <style>
+        * {
+            background-color: darkslategray;
+            color: white;
+        }
+
+        button {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app"></div>
+
+    <script>
+        let items = 0;
+        let inputTxt = '';
+        let upperCases = '';
+        let upperCaseCount = '';
+        let lowerCases = '';
+        let lowerCaseCount = '';
+        let numLetters = '';
+        let numberOfLetter = '';
+
+        updateView()
+        function updateView() {
+            let html = `
+            <div>
+                <input type="text" onInput="inputTxt = this.value">
+                <button onclick="submitString('inputTxt')">Submit</button>
+                <button onclick="checkStringNum()">Check</button>
+            </div>
+                <br>
+            <div>
+                The String: ${inputTxt}
+            </div>
+                <br>
+            <div>
+                UpperCase Letters: ${upperCases} ${upperCaseCount}
+            </div>
+                <br>
+            <div>
+                LowerCase Letters: ${lowerCases} ${lowerCaseCount}
+            </div> 
+                <br>
+            <div>
+                Length Of String: ${numLetters}
+            </div>
+                <br>
+            <div>
+                Length Of String Counted by For-Loop: ${numberOfLetter}
+            </div>
+            `;
+            document.getElementById('app').innerHTML = html
+        }
+
+        function submitString() {
+            const upperMatched = inputTxt.match(/[A-Z]/g) || '';
+            const lowerMatched = inputTxt.match(/[a-z]/g) || '';
+
+            upperCases = upperMatched;
+            upperCaseCount = `(${upperMatched?.length || 'none'})`;
+
+            lowerCases = lowerMatched;
+            lowerCaseCount = `(${lowerCases?.length || 'none'})`;
+
+            numLetters = inputTxt.length;
+
+            console.log(inputTxt)
+            checkStringNum()
+            updateView()
+        }
+        
+        function checkStringNum() {
+            for(let i = 0; i < inputTxt.length; i++) {
+                numberOfLetter++
+                console.log(numberOfLetter)
+            }
+            updateView()
+            numberOfLetter = 0;
+        }
+        // Trene mer på For-loops og string / charAt og indexOf til codeAlong Imorra kl 9
+
+    </script>
+</body>
+
+</html>

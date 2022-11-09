@@ -59,14 +59,15 @@
             if (txt1 == '' || txt2 == '' || txt3 == '') {
                 return
             }
-            if (txt1 == txt2) tekst += '<b>Tekst 1 og 2 er like<b><br>';
-            if (txt1 != txt2) tekst += '<del><b>Tekst 1 og 2 er like<b></del><br/>';
-
-            if (txt1 == txt3) tekst += '<b>Tekst 1 og 3 er like<b><br/>';
-            if (txt1 != txt3) tekst += '<del>Tekst 1 og 3 er like</del><br/>';
-
-            if (txt3 == txt2) tekst += '<b>Tekst 2 og 3 er like<b><br/>';
-            if (txt3 != txt2) tekst += '<del>Tekst 2 og 3 er like</del><br/>';
+            tekst += txt1 == txt2 ? '<b>Tekst 1 og 2 er like<b><br>' : '<del><b>Tekst 1 og 2 er like<b></del><br/>';
+            // if (txt1 == txt2) tekst += '<b>Tekst 1 og 2 er like<b><br>';
+            // if (txt1 != txt2) tekst += '<del><b>Tekst 1 og 2 er like<b></del><br/>';
+            tekst += txt1 == txt3 ? '<b>Tekst 1 og 3 er like<b><br/>' : '<del>Tekst 1 og 3 er like</del><br/>';
+            // if (txt1 == txt3) tekst += '<b>Tekst 1 og 3 er like<b><br/>';
+            // if (txt1 != txt3) tekst += '<del>Tekst 1 og 3 er like</del><br/>';
+            tekst += txt3 == txt2 ? '<b>Tekst 2 og 3 er like<b><br/>' : '<del>Tekst 2 og 3 er like</del><br/>';
+            // if (txt3 == txt2) tekst += '<b>Tekst 2 og 3 er like<b><br/>';
+            // if (txt3 != txt2) tekst += '<del>Tekst 2 og 3 er like</del><br/>';
 
 
             if (txt1 <= txt2 && txt1 <= txt3) firstTxt += txt1;
