@@ -23,14 +23,15 @@
         //model
         let num1 = 0;
         let num2 = 1;
+        let outPut = document.getElementById('info');
 
         function randomGenerate() {
             while (num1 !== num2) {
                 num1 = Math.ceil(Math.random() * 100000);
                 num2 = Math.ceil(Math.random() * 100000);
-                document.getElementById('info').innerHTML = 'Searching Database...'
+                outPut.innerHTML = 'Searching Database...'
                 if (num1 === num2) {
-                    document.getElementById('info').innerHTML = 'Equal Numbers Found: ' + num1 + ': :' + num2;
+                    document.getElementById('info').innerHTML = 'Equal Numbers Found: ' + num1 + ' ' + ':' + ' ' + num2;
                 }
 
                 
