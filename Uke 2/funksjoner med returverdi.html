@@ -17,11 +17,13 @@
     <button onclick="createAndShowHtml('yellow', 'GET Academy', 40, 'black')">Test3</button>
 
     <script>
+        let outPut = document.getElementById('mainDiv');
 
         function createAndShowHtml(color, text, fontSize, textColor) {
-            document.getElementById('mainDiv').innerHTML = `
+            outPut.innerHTML = `
             <div ${createStyle(color, fontSize, textColor)}>${text} </div>
             `;
+            console.log(outPut)
         }
 
         function createStyle(color, fontSize, textColor) {
