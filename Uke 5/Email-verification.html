@@ -21,16 +21,14 @@
 
         function checkEmail(email) {
                 if (email.indexOf("@") == -1) {
-                    console.log("there is no @");
-                    return;
+                    return console.log("there is no @");
                 }
                 if (Email.indexOf(".") == -1) {
-                    console.log("There is no .")
-                    return;
+                    return console.log("There is no .")
                 }
                 if (Email.indexOf(" ") == 1) {
-                    console.log("no spaces allowed in a email");
-                    return;
+                    return console.log("no spaces allowed in a email");
+                    
                 }
                 console.log("Valid Email.");
             // }
