@@ -1,4 +1,3 @@
-let outPut = document.getElementById('app')
 let inputTxt = '';
 
 updateView()
@@ -11,7 +10,7 @@ function updateView() {
             ${inputTxt}
         </div>
         `;
-    outPut.innerHTML = html;
+        document.getElementById('app').innerHTML = html;
 }
 
 function setInput(input) {
