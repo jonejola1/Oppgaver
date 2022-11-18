@@ -1,100 +1,108 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title>Kalkulator</title>
-    <style> 
-        #app {
-            width: 364px;
-            height: 500px;
+    <style type="text/css">
+        body {
+            background-color: darkslategray;
+            height: 200px;
+            width: 400px;
         }
-        div {
+
+        .calcDiv {
             float: left;
             background-color: beige;
-            width: 53px;
-            height: 53px;
+            width: 50px;
+            height: 50px;
             padding: 10px;
-            margin: 5px;
+            margin: 10px;
             text-align: center;
-            vertical-align: middle;
+            vertical-align: left;
             font-family: helvetica;
-            font-size: 180%;
+            font-size: 200%;
             border: #bbbbaa solid 4px;
             border-radius: 10px;
-            }
-                        
-            div.resultBox {
-                overflow-y: scroll;
-                color: black;
-                height: 100px;
-                width: 325px;
-                text-align: right;
-            }
- 
-            div.firstInRow {
-                clear: left;
-            }
-            ::-webkit-scrollbar {
-                display: none;
-            }
+        }
+
+        .resultBox {
+            background-color: beige;
+            height: 100px;
+            width: 350px;
+            padding: 10px;
+            margin: 10px;
+            font-size: 200%;
+            border: #bbbbaa solid 4px;
+            border-radius: 10px;
+            text-align: right;
+        }
+
+        /* .firstInRow {
+            clear: left;
+        } */
     </style>
 </head>
+
 <body>
     <div id="app"></div>
 
-<script>
-        //Model
+    <script type="text/javascript">
         let resultBox = '';
+        let output = document.getElementById('app')
 
+        updateView()
+        function updateView() {
+            let html = ''
+            html = `
+            <div class="resultBox"> ${resultBox}</div>
 
+            <div class="calcDiv" class="firstInRow" onclick="addCharacter(7)">7</div>
+            <div class="calcDiv" onclick="addCharacter(8)">8</div>
+            <div class="calcDiv" onclick="addCharacter(9)">9</div>
+            <div class="calcDiv" onclick="checkValue('/')">÷</div>
 
-        //view
-        updateView();
-        function updateView() { 
-            document.getElementById('app').innerHTML = `
-                <div class="resultBox">${resultBox}</div>
+            <div class="calcDiv" class="firstInRow" onclick="addCharacter(4)">4</div>
+            <div class="calcDiv" onclick="addCharacter(5)">5</div>
+            <div class="calcDiv" onclick="addCharacter(6)">6</div>
+            <div class="calcDiv" onclick="checkValue('*')">×</div> 
 
-                <div class="firstInRow" onclick="addCharacter(7)">7</div>
-                <div onclick="addCharacter(8)">8</div>
-                <div onclick="addCharacter(9)">9</div>
-                <div onclick="addCharacter('÷')">÷</div>
-                <br>
-                <div class="firstInRow" onclick="addCharacter(4)">4</div>
-                <div onclick="addCharacter(5)">5</div>
-                <div onclick="addCharacter(6)">6</div>
-                <div onclick="addCharacter('×')">×</div>
-                <br>
-                <div class="firstInRow" onclick="addCharacter(1)">1</div>
-                <div onclick="addCharacter(2)">2</div>
-                <div onclick="addCharacter(3)">3</div>
-                <div onclick="addCharacter('-')">-</div>
+            <div class="calcDiv" class="firstInRow" onclick="addCharacter(1)">1</div>
+            <div class="calcDiv" onclick="addCharacter(2)">2</div>
+            <div class="calcDiv" onclick="addCharacter(3)">3</div>
+            <div class="calcDiv" onclick="checkValue('-')">-</div> 
 
-                <div class="firstInRow" onclick="clearResult()">C</div>
-                <div onclick="addCharacter(0);">0</div>
-                <div onclick="calculate()">=</div>
-                <div onclick="addCharacter('+')">+</div>
+            <div class="calcDiv" class="firstInRow" onclick="clearResult();">C</div>
+            <div class="calcDiv"  onclick="addCharacter(0)">0</div>
+            <div class="calcDiv" onclick="calculate()">=</div>
+            <div class="calcDiv" onclick="checkValue('+')">+</div>    
             `;
+            output.innerHTML = html;
         }
-        //controller
 
         function addCharacter(x) {
             resultBox += x;
-            updateView();
+            updateView()
         }
 
         function calculate() {
-            let calculation = resultBox
-                .replace('×', '*')
-                .replace('÷', '/');
-            resultBox = eval(calculation);
-            updateView();
+            resultBox = eval(resultBox);
+            updateView()
+            resultBox = '';
         }
 
         function clearResult() {
             resultBox = '';
-            updateView();
+            updateView()
+        }
+
+        function checkValue(x) { //This will stop you from entering a operator before a number 
+            if (resultBox) {
+                return addCharacter(x)
+            }
         }
     </script>
 </body>
+
 </html>
