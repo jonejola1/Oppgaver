@@ -9,9 +9,9 @@
     <div id="content"></div>
     <script>
         // model
-        let sum = 0;
-        let count = 0;
-        let inputValue = '';
+        var sum = 0;
+        var count = 0;
+        var inputValue = '';
 
         // view
         show();
@@ -31,17 +31,15 @@
 
         // controller
         function add() {
-            sum = inputValue;
-            count = sum / count;
+            sum = inputValue
             count = inputValue.length;
-            show();
+            show()
         }
 
         function reset() {
             inputValue = '';
-            sum = '';
-            count = '';
-            show();
+            sum = 0;
+            show()
         }
 
     </script>
