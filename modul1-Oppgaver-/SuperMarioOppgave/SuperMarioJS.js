@@ -1,9 +1,12 @@
+let choosenPicture = document.getElementById('selectedChar')
 let disabledBtn = false;
 let characterHp;
 let bowserHp = 300;
 let selectedCharacter;
 let charSelected = false;
 let choosenChar = '';
+let toadUses = false;
+let bwShroom = false;
 
 function selectCharacter(char, element) {
     selectedCharacter = char;
@@ -13,7 +16,7 @@ function selectCharacter(char, element) {
     console.log(selectedCharacter)
     console.log(charSelected)
 
-    document.getElementById('selectedChar').src = choosenChar;
+    choosenPicture.src = choosenChar;
     setCharHealth();
     setBattleHp()
 }
@@ -22,12 +25,15 @@ function setCharHealth() {
     if (selectedCharacter == 'mario') {
         characterHp = 200;
     }
+
     if (selectedCharacter == 'luigi') {
         characterHp = 140;
     }
+
     if (selectedCharacter == 'peach') {
         characterHp = 100;
     }
+
     if (selectedCharacter == 'yoshi') {
         characterHp = 80;
     }
@@ -36,21 +42,22 @@ function setCharHealth() {
 }
 
 function toadHealth() {
-    let useToad = true;
-
-    useToad == true ? setCharHealth() : '';
+    if (toadUses) { return }
+    toadUses = !toadUses
+    setCharHealth()
     setBattleHp()
-    console.log(useToad)
 }
 
 function bwsHealth() {
+    if (bwShroom) { return }
+    bwShroom = !bwShroom;
     bowserHp = 300;
     setBattleHp()
 }
 
 function setBattleHp() {
-    document.getElementById('bowserHealthPoints').innerHTML = bowserHp;
     document.getElementById('healthPoints').innerHTML = characterHp;
+    document.getElementById('bowserHealthPoints').innerHTML = bowserHp;
 
     showWinner()
 }
@@ -82,12 +89,11 @@ function showWinner() {
 }
 
 function changeBtn() {
-    if (characterHp <= 0 || bowserHp <= 0 ) {
+    if (characterHp <= 0 || bowserHp <= 0) {
         atkPlayer.disabled = true
         atkBowser.disabled = true
     } else {
         atkPlayer.disabled = false
         atkBowser.disabled = false
     }
-    console.log(disabledBtn)
 }

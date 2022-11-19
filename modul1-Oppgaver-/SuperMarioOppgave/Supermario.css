@@ -1,3 +1,8 @@
+body {
+    background-color: darkslategrey;
+    color:white;
+}
+
 #winner {
     font-size: 20px;
 }
