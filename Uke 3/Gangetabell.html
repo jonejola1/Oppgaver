@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GangeTabell</title>
+    <style>
+        body{ 
+            background-color: darkslategrey;
+            color: deepskyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="range" min="1" max="100" value="5" oninput="updateMatrix(this.value)" />
+    <div id="inputColumn"></div>
+    <div id="multiplicationMatrix"></div>
+    <script>
+        // hjelpevariabler for view og controller
+        let output = document.getElementById('multiplicationMatrix');
+        let valOutput = document.getElementById('inputColumn')
+
+        // model
+        let columnCount = 5;
+        let multiplicationMatrix = [
+            1, 2, 3, 4, 5,
+            2, 4, 6, 8, 10,
+            3, 6, 9, 12, 15,
+            4, 8, 12, 16, 20,
+            5, 10, 15, 20, 25,
+        ];
+
+        // view
+        updateView();
+        function updateView() {
+            let html = '';
+            for (let i = 0; i < multiplicationMatrix.length; i++) {
+                let number = multiplicationMatrix[i];
+                html += `<div>${number}</div>`;
+            }
+            valOutput.innerHTML = `<div style="color: white;">${columnCount}</div>`
+            output.innerHTML = html;
+            output.style.display = 'grid';
+            output.style.gridTemplateColumns = `repeat(${columnCount},40px)`;
+        
+        }
+        function updateMatrix(num) {
+            columnCount = num
+            multiplicationMatrix = [];
+            for (let i = 1; i <= num; i++) {
+                for (let j = 1; j <= num; j++) {
+                    multiplicationMatrix.push(i * j) 
+                }
+            }
+            updateView()
+        }
+    </script>
+</body>
+
+</html>
